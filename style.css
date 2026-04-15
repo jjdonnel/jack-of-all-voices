@@ -1,3 +1,4 @@
+/* --- 1. GLOBAL RESET & BASE --- */
 * {
     margin: 0;
     padding: 0;
@@ -6,154 +7,367 @@
 }
 
 body {
-    height: 100vh;
-    background-image: linear-gradient(to bottom right, rgba(50,150,150, 0.5), rgba(20,120,200, 0.5));
-    background-repeat: none;
-}
-.navbar {
-    /* z-index: 10; */
-    height: 2em;
-    /* background-color: rgb(100, 220, 220); */
-    /* background-image: linear-gradient(to bottom right, rgb(174, 253, 227), rgb(168, 217, 255)); */
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    background-image: linear-gradient(to bottom right, rgba(50, 150, 150, 0.5), rgba(20, 120, 200, 0.5));
+    display: flex;
+    flex-direction: column;
 }
 
-.label {
-    height: 2em;
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+/* --- 2. NAVIGATION (Mobile-First) --- */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.3);
+background-color: #4a7c66; /* Lightened Sage Green */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    padding: 0 1.5em;
+    z-index: 1000;
+}
+
+/* Hide checkboxes and bullets */
+.menuOpen,
+.menuInput {
+    display: none !important;
+}
+
 ul {
     list-style: none;
+    /* Removes all bullet points */
 }
 
-li {
-    padding: .5em;
+/* Hamburger Icon */
+.label span {
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+    user-select: none;
 }
 
-input[type="checkbox"] {
-    display: none;
+/* Unified Menu & Submenu Background */
+.menu {
+    width: 14em;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    opacity: 0;
+    /* Clean solid color for a cohesive look */
+    background: rgba(174, 253, 227, 0.98);
+  background-color: #4a7c66;
+    border-radius: 0 0 15px 0;
+    transform: translateX(-110%);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
+    padding: 1em 0;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
 }
 
-span {
-    font-size: 1.4em;
-}
-
-.arrow {
-    transform: rotate(180deg);
-}
-
-.menuInput:checked ~ .subMenu {
-    /* display: block; */
-    height: 120px;
-    opacity: 1;
-    transition:  all 0.5s ease;
-    /* transition: opacity 0.4s ease; */
-}
-.menuInput:checked ~ span {
-    transform: rotate(180deg);
-}
-.menuOpen:checked ~ .menu {
+.menuOpen:checked~.menu {
     opacity: 1;
     transform: translateX(0);
-    transition: all 0.3s ease;
 }
 
-.menuOpen:checked .container {
-    opacity: 0.5;
-}
-.title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3em;
-    font-style: italic;
-}
-
-.menu {
-    width: 10em;
-    position: absolute;
-    opacity: 0;
-    /* height: 100%; */
-    /* display: none; */
-    /* top: 0; */
-    /* background-color: rgb(100, 220, 220); */
-    background-image: linear-gradient(to bottom right, rgba(174, 253, 227, 0.75), rgba(168, 217, 255,0.75));
-    /* z-index: 10; */
-    border-radius: 0 10px 10px 0;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: flex-start;
-    transform: translateX(-100%);
-    transition: all 0.3s ease;
-}
-
+/* Submenu - Matches parent color exactly */
 .subMenu {
-    /* width: 10em; */
-    /* display: none; */
-    opacity: 0;
-    left: 1em;
-    padding-top: .5em;
-    border-radius: 10px 10px; 
     height: 0;
-    transition: all 0.5s ease;
-    /* transition: opacity 0.4s ease; */
+    opacity: 0;
     overflow: hidden;
+    transition: height 0.3s ease, opacity 0.2s ease;
+    background: transparent;
+background-color: rgba(74, 124, 102, 0.95);
+    /* Inherits from .menu */
 }
 
-.label:hover > .subMenu {
-    display: block;
-}
-
-.label:hover > .menu {
-    display: block;
-}
-
-input {
-    font-size: 1.5em;
-    float: right;
-    width: 100%;
-}
-
-.section label {
-    font-family: Verdana;
-    font-size: 1.5em;
-    font-weight: lighter;
-}
-
-.container {
-    height: 62vh;
-    width: 100vw;
-    /* margin-top: 18vh; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* opacity: 0; */
-    transition: opacity .5s ease;
-}
-
-.section {
-    background-image: linear-gradient(to bottom right, rgb(174, 253, 227), rgb(168, 217, 255));
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    row-gap: 2em;
-    padding: 1em;
-    border-radius: 10px;
+.menuInput:checked~.subMenu {
     height: auto;
-    margin: 1em;
-    width: 50%;
+    opacity: 1;
+    padding-bottom: 10px;
 }
 
-.show {
-    display: flex;
-    /* opacity: 1;
-    transition: opacity 1s ease; */
+/* Menu Links */
+.menu a,
+.menu .label {
+    text-decoration: none;
+    color: #1a5a5a;
+    /* Consistent teal text */
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    font-weight: bold;
 }
 
-.comps {
-    padding: 1em;
-    font-size: 1em;
+.subMenu li a {
+    padding-left: 40px;
+    /* Indent sub-items */
+    font-size: 0.9em;
+}
+
+.menu a, .menu .label, .subMenu a {
+    color: #aefde3; /* Using your mint color for text to pop against the dark green */
 }
 
 .items:hover {
-    background-color: lightgray;
-    transition: background-color 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.4);
 }
+
+/* --- 3. MAIN CONTENT & GLASS BOX --- */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Horizontal centering */
+    justify-content: center; /* Vertical centering */
+    width: 100%;
+    padding: 0;             /* Remove padding that might push it off-center */
+    margin: 0 auto;         /* Force-center the block itself */
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    border-radius: 15px;
+    width: 95%;
+    max-width: 800px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.centered-logo {
+    width: 75vw;            /* Increased from 60vw to make it bigger */
+    max-width: 380px;       /* Increased from 300px for larger screens */
+    height: auto;
+    display: block;         /* Ensures it behaves like a block for centering */
+    margin: 0 auto;         /* The "Gold Standard" for centering images */
+    border-radius: 20%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    
+    /* If it still looks left, ensure there's no inherited margin-left */
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* --- 4. FOOTER & WEATHER --- */
+.site-footer {
+    flex-shrink: 0;
+    /* Prevents the footer from squishing */
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer-links a,
+.weather-widget {
+    color: #1a5a5a;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* --- 5. TRANSITIONS --- */
+.fade-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    display: none;
+}
+
+.show {
+    display: flex !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Glass Card Container */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 2.5rem;
+    color: #fff;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Contact Form Styling */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(174, 253, 227, 0.3);
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    font-family: inherit;
+}
+
+.contact-form input::placeholder, 
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* THE GRID FIX: This tells the two columns to be equal and not overlap */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Force 50/50 split on desktop */
+    gap: 30px; /* Space between photo and text */
+    align-items: center; /* Vertically center the text to the photo */
+    margin-top: 30px;
+}
+
+/* THE PHOTO FIX: Limits the size, centers it, and adds padding */
+.about-photo {
+    display: flex;
+    justify-content: center; /* Horizontally center within its grid space */
+    align-items: center; /* Vertically center within its grid space */
+    padding: 20px; /* THE PADDING: This gives it breathing room inside the glass card */
+    width: 100%; /* Take up the full half-column *inside* the grid */
+    box-sizing: border-box; /* Crucial so padding doesn't add width */
+}
+
+.about-photo img {
+    /* --- The 3 Magic Lines --- */
+    width: 100%; /* 1. Scale image to its parent (.about-photo) */
+    max-width: 400px; /* 2. THE ABSOLUTE CAP: Never let it get bigger than this (adjust if needed) */
+    height: auto; /* 3. Maintain aspect ratio so it doesn't look stretched */
+    
+    /* Aesthetics */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 2px solid rgba(174, 253, 227, 0.2); /* Subtle Sage border */
+    display: block; /* Removes weird inline spacing at the bottom */
+}
+
+.btn-submit {
+    background: #4a7c66; /* Your Sage Green */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #aefde3;
+    color: #0a2417;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* --- 5. DESKTOP NAVIGATION (Screens wider than 768px) --- */
+@media screen and (min-width: 768px) {
+    /* Hide the Hamburger Icon on Desktop */
+    .label[for="menuToggle"] {
+        display: none;
+    }
+
+    /* Reset the Menu from a slide-out drawer to a horizontal bar */
+    .menu {
+        position: static;      /* Removes it from the "slide-out" layer */
+        display: flex;         /* Arrays items side-by-side */
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        opacity: 1;            /* Always visible */
+        transform: none;       /* Disable the slide animation */
+        background: transparent; 
+        background-color: #4a7c66; /* Match Navbar */
+        border-radius: 5px;
+        box-shadow: none;
+        padding: 0;
+        margin-left: auto;     /* Pushes the links to the right side of the navbar */
+    }
+
+    /* Style the individual desktop links */
+    .menu li {
+        position: relative;    /* Needed for the submenu dropdown */
+    }
+
+    .menu a, .menu .label {
+        color: white;          /* Make text white to pop against the dark navbar */
+        padding: 0 20px;
+        line-height: 60px;     /* Vertically centers text in the 60px navbar */
+    }
+
+    /* Submenu Dropdown Logic for Desktop */
+    .subMenu {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 200px;
+        background: rgba(174, 253, 227, 0.98);
+                background-color: #4a7c66;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .subMenu li a {
+  color: #ffffff;
+        /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+        line-height: 40px;
+        padding-left: 20px;
+    }
+
+    .menu a:hover, .subMenu li a:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        color: #aefde3; /* Using that mint color as the highlight text */
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr; /* Stack on top of each other */
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .about-photo {
+        padding: 10px; /* Smaller padding on mobile */
+    }
+    
+    .about-photo img {
+        max-width: 320px; /* Keep it focused on smaller screens */
+        margin: 0 auto; /* Force horizontal centering after stacking */
+    }
+}
+

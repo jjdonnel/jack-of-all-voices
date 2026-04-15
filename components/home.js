@@ -1,13 +1,18 @@
 function displayHome() {
+    // 1. Collapse the menu immediately
+closeMenu();
     const main = document.getElementById('main');
-    // main.classList.remove('show');
-    main.innerHTML =
-        `<div id="home" class="home">
-          <p class="title">Conversions</p>
-        </div>`
+    
+   // Switch content back to the logo
+    main.innerHTML = `
+        <div class="logo-container fade-element show">
+            <img src="./images/JackOfAllVoices-logo.jpg" alt="Logo" class="centered-logo">
+        </div>
+    `;
 
-    function show() {
+    // 2. The Hybrid trigger to fade it in
+    main.style.display = 'flex'; 
+    setTimeout(() => {
         main.classList.add('show');
-    }
-    show();
-};
+    }, 50);
+}

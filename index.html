@@ -1,65 +1,77 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack of All Voices</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="displayHome()">
-    <!-- <div id="nav" class="nav">
-        <span id="open">&#9776;</span>
-    </div> -->
-    <nav class="navbar">
-        <input type="checkbox" class="menuOpen" id="top" />
-        <label for="top" id="icon" class="label">
-            <span>&#9776;</span>
-        <!-- Menu -->
-        </label>
+<body>
+<div class="site-wrapper">
+<nav class="navbar">
+    <input type="checkbox" id="menuToggle" class="menuOpen">
+    
+    <label for="menuToggle" class="label">
+        <span>&#9776;</span>
+    </label>
 
-        <ul class="menu">
-            <li class="items" onclick="displayHome()">Home</li>
-            <li id="conversions">
-                <input type="checkbox" class="menuInput" id="A" />
-                <label for="A" class="label">Conversions</label>
-                <span class="arrow">&#9662;</span>
-                <ul id="convSub" class="subMenu">
-                    <li class="items" onclick="displayTemperature()">Temp</li>
-                    <li class="items" onclick="displayPressure()">Pressure</li>
-                    <li class="items" onclick="displayCloudBase()">CloudBase</li>
-                </ul>
-            </li>
-            <li id="finance">
-                <input type="checkbox" class="menuInput" id="B" />
-                <label for="B" class="label">Finance</label>
-                <span class="arrow">&#9662;</span>
-                <ul id="finSub" class="subMenu">
-                    <li class="items" onclick="displayFutureValue()">FutureValue</li>
-                    <li class="items" onclick="displayCompoundInterest()">CompInt</li>
-                    <li class="items" onclick="displayMortgage()">Mortgage</li>
-                </ul>
-            </li>
+    <ul class="menu">
+        <li class="items"><a href="#" onclick="displayHome()">Home</a></li>
+        
+        <li class="items">
+            <input type="checkbox" id="demoToggle" class="menuInput">
+            <label for="demoToggle" class="label">Demos</label>
+            <ul class="subMenu">
+                <li class="items"><a href="#" onclick="displayCommercial()">Commercial</a></li>
+                <li class="items"><a href="#" onclick="displayNarration()">Narration</a></li>
+                <li class="items"><a href="#" onclick="displayInstructional()">Instructional</a></li>
+            </ul>
+        </li>
+        
+        <li class="items"><a href="#" onclick="displayAbout()">About</a></li>
+        <li class="items"><a href="#" onclick="displayContact()">Contact</a></li>
+    </ul>
+</nav>
 
-        </ul>
-    </nav>
-    <!-- </nav> -->
+    <main id="main" class="container">
+        <div class="logo-container fade-element show">
+            <img src="./images/JackOfAllVoices-logo.jpg" alt="Logo" class="centered-logo">
+        </div>
+    </main>
 
-    <main id="main" class="container"></main>
+<footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <p>&copy; 2026 Jack of All Voices</p>
+        </div>
 
-    <script src="calcs.js"></script>
-    <script src="./components/compoundInterest.js"></script>
-    <script src="./components/pressure.js"></script>
-    <script src="./components/futureValue.js"></script>
-    <script src="./components/temperature.js"></script>
-    <script src="./components/cloudBase.js"></script>
-    <script src="./components/home.js"></script>
-    <script src="./components/mortgage.js"></script>
+        <div class="footer-section">
+            <a href="https://rhodyweather.com" target="_blank" class="weather-widget">
+                <span class="status-dot"></span>
+                <span id="current-temp">--°F</span>
+                <span id="weather-desc">Loading...</span>
+            </a>
+        </div>
 
+        <div class="footer-section footer-links">
+            <a href="mailto:your-email@example.com">Email</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</footer>
+</div>
+    
+<script src="app.js"></script>
+<script src="components/weather.js"></script> 
+
+<script src="components/home.js"></script>
+<script src="components/commercial.js"></script>
+<script src="components/narration.js"></script>
+<script src="components/instructional.js"></script>
+<script src="components/about.js"></script>
+<script src="components/contact.js"></script>
 </body>
 
 </html>
