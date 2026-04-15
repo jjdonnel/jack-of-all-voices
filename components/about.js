@@ -24,7 +24,7 @@ function displayAbout() {
                             <h4>What I Do:</h4>
                             <ul class="skills-list">
                                 <li>🎙️ Commercial & Narrative VO</li>
-                                <li>💻 Full-Stack Web Development</li>
+                                <li>💻 Front-End Web Development</li>
                                 <li>🎧 High-End Audio Production</li>
                             </ul>
                         </div>
