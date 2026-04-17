@@ -1,0 +1,21 @@
+{
+  "short_name": "JackVoices",
+  "name": "Jack of All Voices - Voiceover Services",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "background_color": "#0051ff",
+  "theme_color": "#0051ff",
+  "display": "standalone",
+  "orientation": "portrait"
+}

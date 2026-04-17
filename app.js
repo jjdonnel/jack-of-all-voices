@@ -37,4 +37,11 @@ window.addEventListener('mousedown', function(e) {
     }
 });
 
+// This tells the menu to snap shut whenever a link is clicked
+document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('menuToggle').checked = false;
+    });
+});
+
 // You can add more global logic here as you grow
