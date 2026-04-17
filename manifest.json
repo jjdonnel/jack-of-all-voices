@@ -3,9 +3,10 @@
   "name": "Jack of All Voices",
   "icons": [
     {
-      "src": "images/icon-v3.jpg",
-      "sizes": "512x512",
-      "type": "image/jpeg"
+      "src": "images/logo-final.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any"
     }
   ],
   "start_url": "./index.html",
