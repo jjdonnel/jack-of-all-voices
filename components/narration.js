@@ -21,19 +21,29 @@ closeMenu();
                 <h3>Romance Sample</h3>
                 <p>The "Luxury" read.</p>
                 <audio controls>
-                    <source src="./audio/4-6_romance.mp3" type="audio/mpeg">
+                    <source src="./audio/romance.mp3" type="audio/mpeg">
                 </audio>
             </div>
 
-            <!-- <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
+            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
 
-             <div class="comps">
-                <h3>Audiobook & E-Learning</h3>
-                <p>Clear, consistent pacing for educational and literary content.</p>
+            <div class="comps">
+                <h3>High Fantasy Sample</h3>
+                <p>The "Epic Fantasy" read.</p>
                 <audio controls>
-                    <source src="./audio/narration-book.mp3" type="audio/mpeg">
+                    <source src="./audio/Aethelgard.mp3" type="audio/mpeg">
                 </audio>
-            </div> -->
+            </div>
+
+            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
+
+            <div class="comps">
+                <h3>Mystery</h3>
+                <p>The "Haunting" read.</p>
+                <audio controls>
+                    <source src="./audio/darkTavern.mp3" type="audio/mpeg">
+                </audio>
+            </div>
         </div>
     `;
 

@@ -23,9 +23,9 @@ closeMenu();
             
             <div class="comps">
                 <h3>Main Commercial Reel</h3>
-                <p>Seductive Fragrance Spot.</p>
+                <p>Luxury Car Commercial.</p>
                 <audio controls>
-                    <source src="./audio/WhisperOfEternity.mp3" type="audio/mpeg">
+                    <source src="./audio/luxuryCar.mp3" type="audio/mpeg">
                 </audio>
             </div>
 
