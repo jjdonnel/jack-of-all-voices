@@ -21,7 +21,7 @@ closeMenu();
         <div class="section">
             <h1 class="title">Commercial Demos</h1>
             
-            <div class="comps">
+            <div id="luxury-car"class="comps">
                 <h3>Main Commercial Reel</h3>
                 <p>Luxury Car Commercial.</p>
                 <audio controls>
@@ -31,7 +31,7 @@ closeMenu();
 
             <!-- <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
 
-             <div class="comps">
+             <div id="automotive" class="comps">
                 <h3>Automotive & Hard Sell</h3>
                 <p>Fast-paced, high-impact retail delivery.</p>
                 <audio controls>

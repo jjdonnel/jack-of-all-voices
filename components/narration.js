@@ -17,7 +17,7 @@ closeMenu();
         <div class="section">
             <h1 class="title">Narration Demos</h1>
             
-            <div class="comps">
+            <div id="romance" class="comps">
                 <h3>Romance Sample</h3>
                 <p>The "Luxury" read.</p>
                 <audio controls>
@@ -27,7 +27,7 @@ closeMenu();
 
             <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
 
-            <div class="comps">
+            <div id="high-fantasy" class="comps">
                 <h3>High Fantasy Sample</h3>
                 <p>The "Epic Fantasy" read.</p>
                 <audio controls>

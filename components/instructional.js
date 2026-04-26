@@ -16,7 +16,7 @@ function displayInstructional() {
         <div class="section">
             <h1 class="title">Instructional Demos</h1>
             
-            <div class="comps">
+            <div id="corporate-training" class="comps">
                 <h3>Corporate Training</h3>
                 <p>Professional and informative delivery for internal communications.</p>
                 <audio controls>
