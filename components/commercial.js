@@ -29,16 +29,25 @@ closeMenu();
                 </audio>
             </div>
 
-            <!-- <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
+            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
 
-             <div id="automotive" class="comps">
-                <h3>Automotive & Hard Sell</h3>
+             <div id="technical" class="comps">
+                <h3>High Tech & Hard Sell</h3>
                 <p>Fast-paced, high-impact retail delivery.</p>
                 <audio controls>
-                    <source src="./audio/commercial-auto.mp3" type="audio/mpeg">
+                    <source src="./audio/nexusCore9.mp3" type="audio/mpeg">
                 </audio>
-            </div> -->
+            </div>
 
+            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
+
+             <div id="adventure" class="comps">
+                <h3>Adventure & Hard Sell</h3>
+                <p>Fast-paced, high-impact retail delivery.</p>
+                <audio controls>
+                    <source src="./audio/ApexX1.mp3" type="audio/mpeg">
+                </audio>
+            </div>
 
         </div>
     `;

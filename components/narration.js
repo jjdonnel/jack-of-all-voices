@@ -44,6 +44,17 @@ closeMenu();
                     <source src="./audio/darkTavern.mp3" type="audio/mpeg">
                 </audio>
             </div>
+
+                        <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
+
+            <div class="comps">
+                <h3>Spiritual</h3>
+                <p>The "Wonder" read.</p>
+                <audio controls>
+                    <source src="./audio/NDE.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
         </div>
     `;
 
