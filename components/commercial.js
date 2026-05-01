@@ -1,6 +1,6 @@
 function displayCommercial() {
     // 1. Collapse the menu
-closeMenu();
+    closeMenu();
     // const menuToggle = document.getElementById('top');
     // const demoSubmenu = document.getElementById('A');
     // if (menuToggle) menuToggle.checked = false;
@@ -46,6 +46,14 @@ closeMenu();
                 <p>Fast-paced, high-impact retail delivery.</p>
                 <audio controls>
                     <source src="./audio/ApexX1.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+                         <div id="adventure" class="comps">
+                <h3>Travel-Luggage</h3>
+                <p>Fast-paced, high-impact retail delivery.</p>
+                <audio controls>
+                    <source src="./audio/vantage.mp3" type="audio/mpeg">
                 </audio>
             </div>
 

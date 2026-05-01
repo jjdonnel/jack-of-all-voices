@@ -55,6 +55,14 @@ closeMenu();
                 </audio>
             </div>
 
+                        <div class="comps">
+                <h3>Movie</h3>
+                <p>The "Preview" read.</p>
+                <audio controls>
+                    <source src="./audio/Breakfast.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
         </div>
     `;
 
