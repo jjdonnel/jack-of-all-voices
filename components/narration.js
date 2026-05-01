@@ -45,7 +45,7 @@ function displayNarration() {
                 </audio>
             </div>
 
-                        <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
+            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
 
             <div class="comps">
                 <h3>Spiritual</h3>
@@ -55,7 +55,9 @@ function displayNarration() {
                 </audio>
             </div>
 
-                        <div class="comps">
+            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
+
+            <div class="comps">
                 <h3>Movie</h3>
                 <p>The "Preview" read.</p>
                 <audio controls>

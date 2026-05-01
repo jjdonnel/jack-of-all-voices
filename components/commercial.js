@@ -49,7 +49,9 @@ function displayCommercial() {
                 </audio>
             </div>
 
-                         <div id="adventure" class="comps">
+            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
+
+            <div id="adventure" class="comps">
                 <h3>Travel-Luggage</h3>
                 <p>Fast-paced, high-impact retail delivery.</p>
                 <audio controls>
