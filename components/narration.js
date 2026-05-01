@@ -1,6 +1,6 @@
 function displayNarration() {
     // 1. Collapse the menu
-closeMenu();
+    closeMenu();
 
     // Stop audio from other sections
     const players = document.querySelectorAll('audio');
