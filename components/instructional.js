@@ -24,15 +24,25 @@ function displayInstructional() {
                 </audio>
             </div>
 
-           <!-- <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
+            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
+
+            <div class="comps">
+                <h3>Technical</h3>
+                <p>Unboxing and Assembly.</p>
+                <audio controls>
+                    <source src="./audio/assembly.mp3" type="audio/mpeg">
+                </audio>
+            </div> 
+
+            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
 
             <div class="comps">
                 <h3>Medical & Technical</h3>
                 <p>Precise pronunciation of complex terminology and procedures.</p>
                 <audio controls>
-                    <source src="./audio/instructional-tech.mp3" type="audio/mpeg">
+                    <source src="./audio/hemostat.mp3" type="audio/mpeg">
                 </audio>
-            </div> -->
+            </div> 
         </div>
     `;
 
