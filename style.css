@@ -306,6 +306,71 @@ background-color: rgba(74, 124, 102, 0.95);
     font-weight: 500;
 }
 
+.main-demo-reel {
+    margin-top: 2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.audio-player-wrapper {
+    display: flex;
+    align-items: center; /* Vertically centers the button with the bar */
+    justify-content: center;
+    gap: 15px; /* Space between play button and the bar */
+    width: 100%;
+    max-width: 400px; /* Keeps it from stretching too wide like in image 1 */
+    margin: 0 auto;
+}
+
+.master-play-btn {
+    background: #007bff; /* Adjust to match your logo's primary color */
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.master-play-btn:hover {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+    transform: scale(1.05);
+}
+
+.player-controls {
+    flex-grow: 1; /* Makes the bar take up the remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.progress-container {
+    background: rgba(255, 255, 255, 0.2);
+    height: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    background: #007bff;
+    height: 100%;
+    width: 0%;
+    border-radius: 4px;
+}
+
+.time-stamps {
+    display: flex;
+    justify-content: space-between; /* Pushes 0:00 to the left and total to the right */
+    margin-top: 5px;
+    font-size: 0.75rem;
+    color: #333; /* Or white depending on your background */
+}
+
 /* --- 5. DESKTOP NAVIGATION (Screens wider than 768px) --- */
 @media screen and (min-width: 768px) {
     /* Hide the Hamburger Icon on Desktop */
