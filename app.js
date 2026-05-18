@@ -104,6 +104,7 @@ function createVideoPlayer(videoSrc, posterSrc, title) {
     `;
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Inject the Home HTML first
     displayHome(); 
