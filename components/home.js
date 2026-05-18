@@ -1,14 +1,16 @@
 function displayHome() {
     // 1. Collapse the menu immediately
-closeMenu();
+    closeMenu();
     const main = document.getElementById('main');
-    
-   // Switch content back to the logo
-  main.innerHTML = `
+
+    // Switch content back to the logo
+    main.innerHTML = `
         <div class="logo-container fade-element show">
             <img src="images/JackOfAllVoices-logo.jpg" alt="Logo" class="centered-logo">
         </div>
         
+        ${createVideoPlayer('https://res.cloudinary.com/jjdonnel/video/upload/v1779063616/firstVideo.mp4', 'images/jack-studio.jpg', 'Video Demo Reel')}
+
         <div class="main-demo-reel">
             <h2>Featured Demo Reel</h2>
             <div class="audio-player-wrapper">
@@ -30,7 +32,7 @@ closeMenu();
     `;
 
     // 2. The Hybrid trigger to fade it in
-    main.style.display = 'flex'; 
+    main.style.display = 'flex';
     setTimeout(() => {
         main.classList.add('show');
     }, 50);

@@ -87,9 +87,24 @@ function initMainPlayer() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    // This runs automatically when the site first opens
-    initMainPlayer(); 
-});
+function createVideoPlayer(videoSrc, posterSrc, title) {
+    return `
+        <div class="video-player-wrapper fade-element show">
+            <h2 class="video-section-title">${title}</h2>
+            <div class="video-container">
+                <video 
+                    id="video-demo" 
+                    controls 
+                    poster="${posterSrc}" 
+                    class="centered-video">
+                    <source src="${videoSrc}" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    `;
+}
 
-// You can add more global logic here as you grow
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Inject the Home HTML first
+    displayHome(); 
+});
