@@ -29,7 +29,6 @@ function displayHome() {
             </div>
         </div>
     `;
-
     // 2. The Hybrid trigger to fade it in
     main.style.display = 'flex';
     setTimeout(() => {
