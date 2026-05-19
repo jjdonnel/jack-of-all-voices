@@ -8,7 +8,7 @@ function displayHome() {
             <img src="images/JackOfAllVoices-logo.jpg" alt="Logo" class="centered-logo">
         </div>
         
-        ${createVideoPlayer('https://res.cloudinary.com/jjdonnel/video/upload/v1779063616/firstVideo.mp4', 'images/jack-studio.jpg', 'Video Demo Reel')}
+        ${createVideoPlayer('https://res.cloudinary.com/jjdonnel/video/upload/v1779157758/secondEditedVideo_qncjsc.mp4', 'images/jack-studio.jpg', 'Video Demo Reel')}
 
         <div class="main-demo-reel">
             <h2>Featured Demo Reel</h2>
