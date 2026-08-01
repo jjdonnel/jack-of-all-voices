@@ -21,49 +21,49 @@ function displayNarration() {
                 <h3>Romance Sample</h3>
                 <p>The "Luxury" read.</p>
                 <audio controls>
-                    <source src="./audio/romance.mp3" type="audio/mpeg">
+                    <source src="./audio/CoastFog.mp3" type="audio/mpeg">
                 </audio>
             </div>
 
             <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
 
-            <div id="high-fantasy" class="comps">
-                <h3>High Fantasy Sample</h3>
-                <p>The "Epic Fantasy" read.</p>
+            <div id="documentary" class="comps">
+                <h3>Documentary Sample</h3>
+                <p>The "Informative" read.</p>
                 <audio controls>
-                    <source src="./audio/Aethelgard.mp3" type="audio/mpeg">
+                    <source src="./audio/Ironworks.mp3" type="audio/mpeg">
                 </audio>
             </div>
 
-            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
+            // <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
 
-            <div class="comps">
-                <h3>Mystery</h3>
-                <p>The "Haunting" read.</p>
-                <audio controls>
-                    <source src="./audio/darkTavern.mp3" type="audio/mpeg">
-                </audio>
-            </div>
+            // <div class="comps">
+            //     <h3>Mystery</h3>
+            //     <p>The "Haunting" read.</p>
+            //     <audio controls>
+            //         <source src="./audio/darkTavern.mp3" type="audio/mpeg">
+            //     </audio>
+            // </div>
 
-            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
+            // <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
 
-            <div class="comps">
-                <h3>Spiritual</h3>
-                <p>The "Wonder" read.</p>
-                <audio controls>
-                    <source src="./audio/NDE.mp3" type="audio/mpeg">
-                </audio>
-            </div>
+            // <div class="comps">
+            //     <h3>Spiritual</h3>
+            //     <p>The "Wonder" read.</p>
+            //     <audio controls>
+            //         <source src="./audio/NDE.mp3" type="audio/mpeg">
+            //     </audio>
+            // </div>
 
-            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
+            // <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
 
-            <div class="comps">
-                <h3>Movie</h3>
-                <p>The "Preview" read.</p>
-                <audio controls>
-                    <source src="./audio/Breakfast.mp3" type="audio/mpeg">
-                </audio>
-            </div>
+            // <div class="comps">
+            //     <h3>Movie</h3>
+            //     <p>The "Preview" read.</p>
+            //     <audio controls>
+            //         <source src="./audio/Breakfast.mp3" type="audio/mpeg">
+            //     </audio>
+            // </div>
 
         </div>
     `;
