@@ -7,13 +7,11 @@ function displayHome() {
         <div class="logo-container fade-element show">
             <img src="images/JackOfAllVoices-logo.jpg" alt="Logo" class="centered-logo">
         </div>
-        
-        ${createVideoPlayer('https://res.cloudinary.com/jjdonnel/video/upload/v1779157758/secondEditedVideo_qncjsc.mp4', 'images/jack-studio.jpg', 'Video Demo Reel')}
-
+    
         <div class="main-demo-reel">
-            <h2>Featured Demo Reel</h2>
+            <h2>Featured Read: The Ironworks</h2>
             <div class="audio-player-wrapper">
-                <audio id="main-audio" src="audio/bigDemo.mp3"></audio>
+                <audio id="main-audio" src="audio/Ironworks.mp3"></audio>
                 
                 <button id="master-play-pause" class="master-play-btn">▶</button>
                 
@@ -28,6 +26,8 @@ function displayHome() {
                 </div>
             </div>
         </div>
+         ${createVideoPlayer('https://res.cloudinary.com/jjdonnel/video/upload/v1779157758/secondEditedVideo_qncjsc.mp4', 'images/jack-studio.jpg', 'Jack in the Studio')}
+
     `;
     // 2. The Hybrid trigger to fade it in
     main.style.display = 'flex';

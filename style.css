@@ -308,6 +308,11 @@ background-color: rgba(74, 124, 102, 0.95);
     display: none;
 }
 
+.logo-container {
+    position: relative;
+    top: 10px;
+}
+
 .show {
     display: flex !important;
     flex-direction: column; /* Forces children to stack, not stretch side-by-side */
