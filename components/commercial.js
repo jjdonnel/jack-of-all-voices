@@ -1,5 +1,7 @@
 function displayCommercial() {
     closeMenu();
+    stopAllAudio();
+    setNavTitle('Commercial');
 
     const players = document.querySelectorAll('audio');
     players.forEach(player => player.pause());

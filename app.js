@@ -187,3 +187,11 @@ document.addEventListener('DOMContentLoaded', () => {
         displayHome();
     }
 });
+
+// Updates the center title in the navbar
+function setNavTitle(title) {
+    const navTitle = document.getElementById('nav-page-title');
+    if (navTitle) {
+        navTitle.textContent = title;
+    }
+}

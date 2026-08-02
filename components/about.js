@@ -2,6 +2,7 @@
 function displayAbout() {
     closeMenu();
     stopAllAudio();
+    setNavTitle('About Me');
     
     const main = document.getElementById('main');
     

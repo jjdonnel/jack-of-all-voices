@@ -2,6 +2,7 @@ function displayNarration() {
     // 1. Collapse menu and stop any active audio
     closeMenu();
     stopAllAudio();
+    setNavTitle('Narration');
 
     const main = document.getElementById('main');
 

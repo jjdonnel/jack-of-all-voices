@@ -1,6 +1,7 @@
 function displayHome() {
     closeMenu();
     stopAllAudio();
+    setNavTitle('Jack of All Voices');
 
     const main = document.getElementById('main');
     

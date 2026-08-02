@@ -2,6 +2,7 @@
 function displayContact() {
     closeMenu();
     stopAllAudio(); // Stop audio playback when switching pages
+    setNavTitle('Contact Jack');
 
     const main = document.getElementById('main');
     
