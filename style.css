@@ -447,7 +447,7 @@ nav.navbar img.nav-logo-img {
     font-weight: 600;
     color: #ffffff;
     text-align: center;
-    margin: 15px 0 25px 0;
+    margin: 10px 0 20px 0;
     letter-spacing: 0.5px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
@@ -455,6 +455,170 @@ nav.navbar img.nav-logo-img {
 /* Ensure horizontal rule dividers don't conflict with glass cards */
 #main hr {
     display: none;
+}
+
+/* --- ABOUT PAGE STYLING --- */
+.about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.about-photo img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 16px;
+    border: 1px solid rgba(139, 227, 201, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    display: block;
+    margin: 0 auto 18px auto;
+}
+
+.about-text-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.about-text-content .lead-text {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #8be3c9;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+/* --- ABOUT PAGE GLASS CARD OVERRIDES --- */
+.section.glass-card {
+    width: 90%;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(139, 227, 201, 0.22);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.skills-box {
+    padding: 16px;
+    background: rgba(10, 26, 22, 0.6);
+    border-radius: 14px;
+    border: 1px solid rgba(139, 227, 201, 0.2);
+}
+
+.skills-box h4 {
+    margin-bottom: 10px;
+    color: #8be3c9;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.skills-list li {
+    padding: 4px 0;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+/* --- CONTACT FORM STYLES --- */
+.contact-card {
+    width: 90%;
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 28px 20px;
+    box-sizing: border-box;
+}
+
+.contact-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+}
+
+.form-group {
+    width: 100%;
+}
+
+/* Full-width inputs with glass styling */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    background: rgba(10, 26, 22, 0.6);
+    border: 1px solid rgba(139, 227, 201, 0.3);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #8be3c9;
+    box-shadow: 0 0 8px rgba(139, 227, 201, 0.3);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+/* Styled Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: #8be3c9;
+    color: #0b1a15;
+    font-weight: 700;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    margin-top: 6px;
+}
+
+.btn-submit:hover {
+    background: #a3ebd7;
+    transform: translateY(-2px);
+}
+
+/* Direct Contact Link */
+.direct-contact {
+    margin-top: 22px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.direct-contact a {
+    color: #8be3c9;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.direct-contact a:hover {
+    text-decoration: underline;
 }
 
 /* --- 8. DESKTOP MEDIA QUERY (768px+) --- */
@@ -549,5 +713,11 @@ nav.navbar img.nav-logo-img {
 
     nav.navbar .subMenu li a:hover {
         background-color: rgba(139, 227, 201, 0.15) !important;
+    }
+
+    .about-grid {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 30px;
     }
 }

@@ -1,5 +1,7 @@
 function displayHome() {
     closeMenu();
+    stopAllAudio();
+
     const main = document.getElementById('main');
     
     main.innerHTML = `

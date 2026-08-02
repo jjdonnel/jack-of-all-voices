@@ -1,76 +1,123 @@
 function displayNarration() {
-    // 1. Collapse the menu
+    // 1. Collapse menu and stop any active audio
     closeMenu();
-
-    // Stop audio from other sections
-    const players = document.querySelectorAll('audio');
-    players.forEach(player => player.pause());
+    stopAllAudio();
 
     const main = document.getElementById('main');
 
-    // 2. Prepare for the transition
+    // 2. Prepare for transition
     main.classList.remove('show');
     main.style.display = 'none';
 
-    // 3. Inject Content
+    // 3. Inject matching glass cards & custom player UI
     main.innerHTML = `
         <div class="section">
-            <h1 class="title">Narration Demos</h1>
+            <h1 class="page-title">Narration Demos</h1>
             
-            <div id="romance" class="comps">
+            <!-- Sample 1: Romance -->
+            <div id="romance" class="genre-card">
                 <h3>Romance Sample</h3>
-                <p>The "Luxury" read.</p>
-                <audio controls>
-                    <source src="./audio/CoastFog.mp3" type="audio/mpeg">
-                </audio>
+                <p class="demo-subtitle">The "Luxury" read</p>
+                <div class="audio-player-wrapper">
+                    <audio class="audio-element" src="./audio/CoastFog.mp3"></audio>
+                    <button class="master-play-btn" aria-label="Play">▶</button>
+                    <div class="player-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-stamps">
+                            <span class="time-current">0:00</span>
+                            <span class="time-total">0:00</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
-
-            <div id="high-fantasy" class="comps">
+            <!-- Sample 2: High Fantasy -->
+            <div id="high-fantasy" class="genre-card">
                 <h3>High Fantasy Sample</h3>
-                <p>The "Epic Fantasy" read.</p>
-                <audio controls>
-                    <source src="./audio/Aethelgard.mp3" type="audio/mpeg">
-                </audio>
+                <p class="demo-subtitle">The "Epic Fantasy" read</p>
+                <div class="audio-player-wrapper">
+                    <audio class="audio-element" src="./audio/Aethelgard.mp3"></audio>
+                    <button class="master-play-btn" aria-label="Play">▶</button>
+                    <div class="player-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-stamps">
+                            <span class="time-current">0:00</span>
+                            <span class="time-total">0:00</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
-
-            <div class="comps">
+            <!-- Sample 3: Mystery -->
+            <div id="mystery" class="genre-card">
                 <h3>Mystery</h3>
-                <p>The "Haunting" read.</p>
-                <audio controls>
-                    <source src="./audio/darkTavern.mp3" type="audio/mpeg">
-                </audio>
+                <p class="demo-subtitle">The "Haunting" read</p>
+                <div class="audio-player-wrapper">
+                    <audio class="audio-element" src="./audio/darkTavern.mp3"></audio>
+                    <button class="master-play-btn" aria-label="Play">▶</button>
+                    <div class="player-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-stamps">
+                            <span class="time-current">0:00</span>
+                            <span class="time-total">0:00</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
-
-            <div class="comps">
+            <!-- Sample 4: Spiritual -->
+            <div id="spiritual" class="genre-card">
                 <h3>Spiritual</h3>
-                <p>The "Wonder" read.</p>
-                <audio controls>
-                    <source src="./audio/NDE.mp3" type="audio/mpeg">
-                </audio>
+                <p class="demo-subtitle">The "Wonder" read</p>
+                <div class="audio-player-wrapper">
+                    <audio class="audio-element" src="./audio/NDE.mp3"></audio>
+                    <button class="master-play-btn" aria-label="Play">▶</button>
+                    <div class="player-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-stamps">
+                            <span class="time-current">0:00</span>
+                            <span class="time-total">0:00</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
-
-            <div class="comps">
+            <!-- Sample 5: Movie Preview -->
+            <div id="movie-preview" class="genre-card">
                 <h3>Movie</h3>
-                <p>The "Preview" read.</p>
-                <audio controls>
-                    <source src="./audio/Breakfast.mp3" type="audio/mpeg">
-                </audio>
+                <p class="demo-subtitle">The "Preview" read</p>
+                <div class="audio-player-wrapper">
+                    <audio class="audio-element" src="./audio/Breakfast.mp3"></audio>
+                    <button class="master-play-btn" aria-label="Play">▶</button>
+                    <div class="player-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-stamps">
+                            <span class="time-current">0:00</span>
+                            <span class="time-total">0:00</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
     `;
 
-    // 4. Trigger Fade-In
+    // 4. Trigger display and fade-in
     main.style.display = 'flex';
     setTimeout(() => {
         main.classList.add('show');
     }, 50);
+
+    // 5. Attach player event listeners
+    initMainPlayer();
 }

@@ -1,68 +1,99 @@
 function displayCommercial() {
-    // 1. Collapse the menu
     closeMenu();
-    // const menuToggle = document.getElementById('top');
-    // const demoSubmenu = document.getElementById('A');
-    // if (menuToggle) menuToggle.checked = false;
-    // if (demoSubmenu) demoSubmenu.checked = false;
 
-    // Optional: Stop any audio currently playing before loading new section
     const players = document.querySelectorAll('audio');
     players.forEach(player => player.pause());
 
     const main = document.getElementById('main');
 
-    // 2. Prepare for the transition
     main.classList.remove('show');
     main.style.display = 'none';
 
-    // 3. Inject the HTML with multiple reel spaces
     main.innerHTML = `
         <div class="section">
-            <h1 class="title">Commercial Demos</h1>
+            <h1 class="page-title">Commercial Demos</h1>
             
-            <div id="outdoor-gear"class="comps">
+            <div id="outdoor-gear" class="genre-card">
                 <h3>Main Commercial Reel</h3>
-                <p>Outdoor Gear Commercial.</p>
-                <audio controls>
-                    <source src="./audio/HarborCraft.mp3" type="audio/mpeg">
-                </audio>
+                <p class="demo-subtitle">Outdoor Gear Commercial</p>
+                <div class="audio-player-wrapper">
+                    <audio class="audio-element" src="./audio/HarborCraft.mp3"></audio>
+                    <button class="master-play-btn" aria-label="Play">▶</button>
+                    <div class="player-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-stamps">
+                            <span class="time-current">0:00</span>
+                            <span class="time-total">0:00</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
-
-             <div id="technical" class="comps">
+            <div id="technical" class="genre-card">
                 <h3>High Tech & Hard Sell</h3>
-                <p>Fast-paced, high-impact retail delivery.</p>
-                <audio controls>
-                    <source src="./audio/nexusCore9.mp3" type="audio/mpeg">
-                </audio>
+                <p class="demo-subtitle">Fast-paced, high-impact retail delivery</p>
+                <div class="audio-player-wrapper">
+                    <audio class="audio-element" src="./audio/nexusCore9.mp3"></audio>
+                    <button class="master-play-btn" aria-label="Play">▶</button>
+                    <div class="player-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-stamps">
+                            <span class="time-current">0:00</span>
+                            <span class="time-total">0:00</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
-
-             <div id="adventure" class="comps">
+            <div id="adventure" class="genre-card">
                 <h3>Adventure & Hard Sell</h3>
-                <p>Fast-paced, high-impact retail delivery.</p>
-                <audio controls>
-                    <source src="./audio/ApexX1.mp3" type="audio/mpeg">
-                </audio>
+                <p class="demo-subtitle">Fast-paced, high-impact retail delivery</p>
+                <div class="audio-player-wrapper">
+                    <audio class="audio-element" src="./audio/ApexX1.mp3"></audio>
+                    <button class="master-play-btn" aria-label="Play">▶</button>
+                    <div class="player-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-stamps">
+                            <span class="time-current">0:00</span>
+                            <span class="time-total">0:00</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <hr style="width:100%; border: 0.5px solid rgba(255,255,255,0.2); margin: 1em 0;">
-
-            <div id="adventure" class="comps">
-                <h3>Travel-Luggage</h3>
-                <p>Fast-paced, high-impact retail delivery.</p>
-                <audio controls>
-                    <source src="./audio/vantage.mp3" type="audio/mpeg">
-                </audio>
+            <div id="travel" class="genre-card">
+                <h3>Travel - Luggage</h3>
+                <p class="demo-subtitle">Fast-paced, high-impact retail delivery</p>
+                <div class="audio-player-wrapper">
+                    <audio class="audio-element" src="./audio/vantage.mp3"></audio>
+                    <button class="master-play-btn" aria-label="Play">▶</button>
+                    <div class="player-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-stamps">
+                            <span class="time-current">0:00</span>
+                            <span class="time-total">0:00</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
     `;
 
-    // 4. The Anti-Flash Hybrid Sequence
+    // Re-bind click event listeners to custom play buttons
+    if (typeof initMainPlayer === 'function') {
+        initMainPlayer();
+    } else if (typeof setupAudioPlayers === 'function') {
+        setupAudioPlayers();
+    }
+
     main.style.display = 'flex';
 
     setTimeout(() => {

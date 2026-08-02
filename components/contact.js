@@ -1,18 +1,29 @@
 // in contact.js
 function displayContact() {
     closeMenu();
+    stopAllAudio(); // Stop audio playback when switching pages
+
     const main = document.getElementById('main');
+    
+    // Reset view for smooth transition
     main.classList.remove('show');
+    main.style.display = 'none';
 
     main.innerHTML = `
-        <div class="section glass-card">
+        <div class="section glass-card contact-card">
             <h2 class="section-title">Get In Touch</h2>
-            <p>Ready to start your next project? Drop me a line below.</p>
+            <p class="contact-subtitle">Ready to start your next project? Drop me a line below.</p>
             
             <form class="contact-form" action="https://formspree.io/f/xlgagono" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Project Details" rows="5" required></textarea>
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Project Details" rows="5" required></textarea>
+                </div>
                 <button type="submit" class="btn-submit">Send Message</button>
             </form>
             
@@ -22,5 +33,8 @@ function displayContact() {
         </div>
     `;
 
-    setTimeout(() => { main.classList.add('show'); }, 50);
+    main.style.display = 'flex';
+    setTimeout(() => { 
+        main.classList.add('show'); 
+    }, 50);
 }

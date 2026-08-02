@@ -1,9 +1,10 @@
-// in about.js
+// in components/about.js
 function displayAbout() {
     closeMenu();
+    stopAllAudio();
+    
     const main = document.getElementById('main');
     
-    // Smooth transition out
     main.classList.remove('show');
 
     setTimeout(() => {
@@ -24,8 +25,8 @@ function displayAbout() {
                             <h4>What I Do:</h4>
                             <ul class="skills-list">
                                 <li>🎙️ Commercial & Narrative VO</li>
+                                <li>📚 E-Learning & Instructional Reads</li>
                                 <li>💻 Front-End Web Development</li>
-                                <li>🎧 High-End Audio Production</li>
                             </ul>
                         </div>
                     </div>
@@ -33,7 +34,10 @@ function displayAbout() {
                 </div>
             </div>
         `;
-        // Fade back in
-        main.classList.add('show');
+        
+        main.style.display = 'flex';
+        setTimeout(() => {
+            main.classList.add('show');
+        }, 50);
     }, 300);
 }
