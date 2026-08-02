@@ -13,12 +13,13 @@
 <body>
 <div class="site-wrapper">
 <nav class="navbar">
+    <!-- Hamburger Toggle (Left Side) -->
     <input type="checkbox" id="menuToggle" class="menuOpen">
-    
     <label for="menuToggle" class="label">
         <span>&#9776;</span>
     </label>
 
+    <!-- Slide-out Drawer Menu -->
     <ul class="menu">
         <li class="items"><a href="#" onclick="displayHome()">Home</a></li>
         
@@ -35,8 +36,12 @@
         <li class="items"><a href="#" onclick="displayAbout()">About</a></li>
         <li class="items"><a href="#" onclick="displayContact()">Contact</a></li>
     </ul>
-</nav>
 
+    <!-- Logo Image (Right Side) -->
+    <a href="#" onclick="displayHome()" class="nav-logo-link">
+        <img src="images/logo-final.jpg" alt="Jack of All Voices Logo" class="nav-logo-img">
+    </a>
+</nav>
 
 <main id="main" class="container"></main>
 
