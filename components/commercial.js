@@ -2,9 +2,7 @@
 function displayCommercial() {
     loadPage('Commercial', (main) => {
         main.innerHTML = `
-            <div class="section">
                 <h1 class="page-title">Commercial Demos</h1>
-                
                 <div id="outdoor-gear" class="genre-card">
                     <h3>Main Commercial Reel</h3>
                     <p class="demo-subtitle">Outdoor Gear Commercial</p>
@@ -76,8 +74,7 @@ function displayCommercial() {
                         </div>
                     </div>
                 </div>
-            </div>
-        `;
+            `;
 
         // Re-bind click event listeners to custom play buttons
         if (typeof initMainPlayer === 'function') {

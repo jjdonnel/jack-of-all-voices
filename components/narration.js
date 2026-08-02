@@ -2,9 +2,7 @@
 function displayNarration() {
     loadPage('Narration', (main) => {
         main.innerHTML = `
-            <div class="section">
                 <h1 class="page-title">Narration Demos</h1>
-                
                 <!-- Sample 1: Romance -->
                 <div id="romance" class="genre-card">
                     <h3>Romance Sample</h3>
@@ -99,9 +97,7 @@ function displayNarration() {
                         </div>
                     </div>
                 </div>
-
-            </div>
-        `;
+            `;
 
         // Re-attach custom player event listeners after rendering
         initMainPlayer();

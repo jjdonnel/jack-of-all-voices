@@ -2,9 +2,7 @@
 function displayInstructional() {
     loadPage('Instructional', (main) => {
         main.innerHTML = `
-            <div class="section">
                 <h1 class="page-title">Instructional Demos</h1>
-                
                 <!-- Sample 1 -->
                 <div id="corporate-training" class="genre-card">
                     <h3>Corporate Training</h3>
@@ -25,7 +23,7 @@ function displayInstructional() {
                 </div>
 
                 <!-- Sample 2 -->
-                <div id="technical-demo" class="genre-card">
+                <div id="technical-demo" class="genre-card glass-card">
                     <h3>Technical</h3>
                     <p class="demo-subtitle">Unboxing and Assembly</p>
                     <div class="audio-player-wrapper">
@@ -61,9 +59,7 @@ function displayInstructional() {
                         </div>
                     </div>
                 </div>
-
-            </div>
-        `;
+            `;
 
         // Attach player event listeners after DOM insertion
         initMainPlayer();
