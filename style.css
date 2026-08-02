@@ -1,9 +1,11 @@
-/* --- 1. GLOBAL RESET & BASE --- */
+/* --- 1. GLOBAL RESET & LOGO-MATCHED BACKGROUND --- */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 body {
@@ -11,9 +13,18 @@ body {
     width: 100%;
     margin: 0;
     overflow-x: hidden;
-    background-image: linear-gradient(to bottom right, rgba(50, 150, 150, 0.5), rgba(20, 120, 200, 0.5));
     display: flex;
     flex-direction: column;
+
+    /* Studio Background Image with Deep Emerald Gradient Overlay */
+    background: 
+        linear-gradient(
+            135deg, 
+            rgba(14, 38, 32, 0.82), 
+            rgba(10, 26, 22, 0.90)
+        ),
+        url('images/studio-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 .site-wrapper {
@@ -22,153 +33,301 @@ body {
     min-height: 100vh;
 }
 
-/* --- 2. NAVIGATION (Mobile-First) --- */
-.navbar {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 60px;
-    /* background: rgba(0, 0, 0, 0.3); */
-/* background-color: #4a7c66; */
-    /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
-    /* backdrop-filter: blur(10px); */
-    display: flex;
-    align-items: center;
-    padding: 0 1.5em;
-    z-index: 1000;
-}
-
-/* Hide checkboxes and bullets */
-.menuOpen,
-.menuInput {
-    display: none !important;
-}
-
 ul {
     list-style: none;
-    /* Removes all bullet points */
 }
 
-/* Hamburger Icon */
-.label span {
-    font-size: 2em;
-    color: white;
+/* --- 2. FLOATING GLASS NAVIGATION (STRICT) --- */
+nav.navbar {
+    position: fixed;
+    top: 15px;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    max-width: 420px;
+    height: 54px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(139, 227, 201, 0.25);
+    border-radius: 27px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+/* Hide native checkbox controls */
+.menuOpen,
+.menuInput {
+    display: none;
+}
+
+/* Hamburger Icon (Left) */
+.label {
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    user-select: none;
 }
 
-/* Unified Menu & Submenu Background */
+.label span {
+    font-size: 1.6rem;
+    color: #ffffff;
+    user-select: none;
+    line-height: 1;
+}
+
+/* Nav Logo (Right - Fixed Dimensions) */
+nav.navbar a.nav-logo-link {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    width: 38px;
+}
+
+nav.navbar img.nav-logo-img {
+    height: 38px;
+    width: 38px;
+    max-height: 38px;
+    max-width: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+/* Slide-out Menu Drawer */
 .menu {
     width: 14em;
     position: absolute;
-    top: 60px;
+    top: 65px;
     left: 0;
     opacity: 0;
-    /* Clean solid color for a cohesive look */
-    background: rgba(174, 253, 227, 0.98);
-  background-color: #4a7c66;
-    border-radius: 0 0 15px 0;
+    background-color: rgba(10, 26, 22, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(139, 227, 201, 0.2);
+    border-radius: 18px;
     transform: translateX(-110%);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 999;
-    padding: 1em 0;
-    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+    padding: 10px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-.menuOpen:checked~.menu {
+/* Toggle Menu Drawer Open */
+.menuOpen:checked ~ .menu {
     opacity: 1;
     transform: translateX(0);
 }
 
-/* Submenu - Matches parent color exactly */
+/* Submenu Drawer */
 .subMenu {
     height: 0;
     opacity: 0;
     overflow: hidden;
     transition: height 0.3s ease, opacity 0.2s ease;
-    background: transparent;
-background-color: rgba(74, 124, 102, 0.95);
-    /* Inherits from .menu */
+    background-color: rgba(6, 18, 15, 0.95);
 }
 
-.menuInput:checked~.subMenu {
+.menuInput:checked ~ .subMenu {
     height: auto;
     opacity: 1;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
 /* Menu Links */
 .menu a,
-.menu .label {
+.menu .label,
+.subMenu a {
     text-decoration: none;
-    color: #1a5a5a;
-    /* Consistent teal text */
+    color: #8be3c9;
     display: block;
     width: 100%;
     padding: 12px 20px;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 0.95rem;
 }
 
 .subMenu li a {
-    padding-left: 40px;
-    /* Indent sub-items */
-    font-size: 0.9em;
+    padding-left: 35px;
+    font-size: 0.85rem;
+    color: #ffffff;
 }
 
-.menu a, .menu .label, .subMenu a {
-    color: #aefde3; /* Using your mint color for text to pop against the dark green */
+.menu li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-.items:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-}
-
-/* --- 3. MAIN CONTENT & GLASS BOX --- */
+/* --- 3. MAIN CONTENT CONTAINER --- */
 .container {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;    /* Horizontal centering */
-    justify-content: center; /* Vertical centering */
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    padding-top: 60px;             /* Remove padding that might push it off-center */
-    margin: 0 auto;         /* Force-center the block itself */
-}
-.video-sectio-title {
-    margin: 15px 15px;
-}
-/* --- Standardize the Width for the Logo, Video, and Audio --- */
-.centered-logo, 
-.video-container, 
-.main-demo-reel {
-    width: 90%;          /* Margin padding for mobile */
-    max-width: 380px;    /* Matches your logo width exactly */
-    margin-left: auto;
-    margin-right: auto;
+    padding-top: 85px;   /* Clearance for fixed navbar */
+    padding-bottom: 40px;/* Clearance above footer */
+    margin: 0 auto;
 }
 
-/* Ensure the video wrapper doesn't force a different alignment */
-/* Remove the wrapper's background/padding and force the width */
-.video-player-wrapper {
-    background: none !important;
-    padding: 0 !important;
-    border: none !important;
+/* --- HERO TAGLINE --- */
+.tagline-container {
+    text-align: center;
+    margin: 20px 15px 25px 15px;
+    padding: 0 10px;
+}
+
+.hero-tagline {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtagline {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #8be3c9;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+    max-width: 360px;
+    margin: 0 auto;
+    opacity: 0.95;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Video Title / Section Headings */
+#main h2, 
+.video-sectio-title {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    margin: 20px 0 10px 0;
+    text-align: center;
+}
+
+/* --- 4. GLASS CARDS & AUDIO PLAYERS --- */
+.genre-card {
+    width: 90%;
+    max-width: 380px;
+    margin: 0 auto 16px auto;
+    padding: 16px 20px;
+    text-align: center;
+    
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(139, 227, 201, 0.22);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.genre-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+.genre-card h2, 
+.genre-card h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffffff;
+    letter-spacing: 0.3px;
+    margin-bottom: 4px;
+}
+
+.demo-subtitle {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #8be3c9;
+    letter-spacing: 0.2px;
+    margin-bottom: 14px;
+    opacity: 0.9;
+}
+
+/* Custom Audio Player UI */
+.audio-player-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     width: 100%;
+}
+
+.master-play-btn {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(139, 227, 201, 0.35);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+}
+
+.master-play-btn:hover {
+    background: #50d2aa;
+    color: #081a15;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(80, 210, 170, 0.4);
+}
+
+.player-controls {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-/* Force the video container to match the logo precisely */
+.progress-container {
+    background: rgba(255, 255, 255, 0.18);
+    height: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 6px;
+}
+
+.progress-bar {
+    background: #50d2aa;
+    height: 100%;
+    width: 0%;
+    border-radius: 3px;
+}
+
+.time-stamps {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* --- 5. VIDEO CONTAINER --- */
 .video-container {
-    width: 75%;          /* Mobile fallback */
-    max-width: 380px;    /* Matches your logo exactly */
-    /* aspect-ratio: 16 / 9; */
-    border-radius: 15px; /* Keeps the rounded aesthetic */
+    width: 90%;
+    max-width: 380px;
+    border-radius: 18px;
     overflow: hidden;
     background: #000;
     margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .centered-video {
@@ -178,63 +337,46 @@ background-color: rgba(74, 124, 102, 0.95);
     object-fit: contain;
     background-color: #000;
 }
-/* Align the Featured Reel container */
-.main-demo-reel {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 15px;
-    margin-top: 20px;
+
+/* --- 6. ANIMATION & VISIBILITY --- */
+.fade-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    display: none;
 }
 
-.section {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+.show {
     display: flex;
     flex-direction: column;
-    padding: 1.5em;
-    border-radius: 15px;
-    width: 95%;
-    max-width: 800px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    align-items: center;
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.centered-logo {
-    width: 75vw;            /* Increased from 60vw to make it bigger */
-    max-width: 380px;       /* Increased from 300px for larger screens */
-    height: auto;
-    display: block;         /* Ensures it behaves like a block for centering */
-    margin: 0 auto;         /* The "Gold Standard" for centering images */
-    border-radius: 20%;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    
-    /* If it still looks left, ensure there's no inherited margin-left */
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-/* --- 4. FOOTER & WEATHER --- */
+/* --- 7. FOOTER (HIGH CONTRAST) --- */
 .site-footer {
-    flex-shrink: 0; /* Prevents the footer from squishing */
+    flex-shrink: 0;
     width: 100%;
-    padding: 10px 0;
-    background: rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    background: rgba(6, 18, 15, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(139, 227, 201, 0.2);
+    margin-top: auto;
 }
 
-/* Master Layout Structure aligned to your design spine */
 .footer-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Pushes copyright left, interactive widgets right */
+    justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 0 20px;
     width: 100%;
-    max-width: 380px;               /* Locks precisely to the width of your logo spine */
-    margin: 0 auto;                 /* Centers the entire footer content block */
+    max-width: 420px;
+    margin: 0 auto;
 }
 
-/* Standardized flex properties for footer sub-sections */
 .footer-section, 
 .footer-links, 
 .weather-widget {
@@ -244,30 +386,27 @@ background-color: rgba(74, 124, 102, 0.95);
     text-decoration: none;
 }
 
-/* Specific inner widget gaps */
 .weather-widget {
-    gap: 12px;                      /* Clean spacing between the "47°F" and the sun graphic */
+    gap: 12px;
 }
 
 .footer-links {
-    gap: 16px;                      /* Pushes the Email envelope away from the LinkedIn icon */
+    gap: 16px;
 }
 
-/* The Layout Bridge: Spaces the sun icon away from the email envelope container */
-.footer-content .footer-section + .footer-section {
-    margin-left: 16px; 
-}
-
-/* --- GLOBAL FOOTER TYPOGRAPHY & SCHEME --- */
+/* Text & Weather Visibility */
 .site-footer p,
 .weather-widget,
-.social-icon {
-    color: #1a2e26;                 /* Premium dark desaturated slate-charcoal */
-    font-size: 0.85rem;             /* Keeps the taskbar look clean and scaled down */
+#current-temp,
+#weather-desc {
+    color: #d1fae5 !important;
+    font-size: 0.85rem;
+    font-weight: 500;
     margin: 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
-/* --- GRAPHICAL SOCIAL ICONS --- */
+/* Icons */
 .social-icon-link {
     display: inline-flex;
     align-items: center;
@@ -277,18 +416,18 @@ background-color: rgba(74, 124, 102, 0.95);
 }
 
 .social-icon {
-    width: 22px;                    /* Perfect visual parity with your typography sizes */
+    width: 22px;
     height: 22px;
+    color: #8be3c9 !important;
     transition: color 0.2s ease;
 }
 
-/* Unified Interactive States */
 .social-icon-link:hover {
-    transform: scale(1.1);          /* Snappy structural feedback pop */
+    transform: scale(1.15);
 }
 
 .social-icon-link:hover .social-icon {
-    color: #000000;                 /* Deepens to rich black on user hover */
+    color: #ffffff !important;
 }
 
 #weather-desc {
@@ -296,261 +435,119 @@ background-color: rgba(74, 124, 102, 0.95);
 }
 
 #icon {
-    width: 30px;  /* Adjust size to fit your footer height */
+    width: 28px;
     height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
-/* --- 5. TRANSITIONS --- */
-.fade-element {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+/* --- SUB-PAGE HEADINGS & LAYOUT FIXES --- */
+.page-title,
+#main h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin: 15px 0 25px 0;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Ensure horizontal rule dividers don't conflict with glass cards */
+#main hr {
     display: none;
 }
 
-.logo-container {
-    position: relative;
-    top: 10px;
-}
-
-.show {
-    display: flex !important;
-    flex-direction: column; /* Forces children to stack, not stretch side-by-side */
-    align-items: center;    /* Keeps everything centered */
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
-/* Glass Card Container */
-.glass-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    padding: 2.5rem;
-    color: #fff;
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-/* Contact Form Styling */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.contact-form input, 
-.contact-form textarea {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(174, 253, 227, 0.3);
-    padding: 12px;
-    border-radius: 8px;
-    color: white;
-    font-family: inherit;
-}
-
-.contact-form input::placeholder, 
-.contact-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-/* THE GRID FIX: This tells the two columns to be equal and not overlap */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Force 50/50 split on desktop */
-    gap: 30px; /* Space between photo and text */
-    align-items: center; /* Vertically center the text to the photo */
-    margin-top: 30px;
-}
-
-/* THE PHOTO FIX: Limits the size, centers it, and adds padding */
-.about-photo {
-    display: flex;
-    justify-content: center; /* Horizontally center within its grid space */
-    align-items: center; /* Vertically center within its grid space */
-    padding: 20px; /* THE PADDING: This gives it breathing room inside the glass card */
-    width: 100%; /* Take up the full half-column *inside* the grid */
-    box-sizing: border-box; /* Crucial so padding doesn't add width */
-}
-
-.about-photo img {
-    /* --- The 3 Magic Lines --- */
-    width: 100%; /* 1. Scale image to its parent (.about-photo) */
-    max-width: 400px; /* 2. THE ABSOLUTE CAP: Never let it get bigger than this (adjust if needed) */
-    height: auto; /* 3. Maintain aspect ratio so it doesn't look stretched */
-    
-    /* Aesthetics */
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    border: 2px solid rgba(174, 253, 227, 0.2); /* Subtle Sage border */
-    display: block; /* Removes weird inline spacing at the bottom */
-}
-
-.btn-submit {
-    background: #4a7c66; /* Your Sage Green */
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.btn-submit:hover {
-    background: #aefde3;
-    color: #0a2417;
-}
-
-.skills-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-.skills-list li {
-    margin-bottom: 10px;
-    font-weight: 500;
-}
-
-.main-demo-reel {
-    /* margin-top: 2rem; */
-    text-align: center;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 10px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.audio-player-wrapper {
-    display: flex;
-    align-items: center; /* Vertically centers the button with the bar */
-    justify-content: center;
-    gap: 15px; /* Space between play button and the bar */
-    width: 100%;
-    max-width: 400px; /* Keeps it from stretching too wide like in image 1 */
-    margin: 0 auto;
-}
-
-.master-play-btn {
-    background: #007bff; /* Adjust to match your logo's primary color */
-    color: white;
-    border: none;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.master-play-btn:hover {
-    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
-    transform: scale(1.05);
-}
-
-.player-controls {
-    flex-grow: 1; /* Makes the bar take up the remaining space */
-    display: flex;
-    flex-direction: column;
-}
-
-.progress-container {
-    background: rgba(255, 255, 255, 0.2);
-    height: 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 5px;
-}
-
-.progress-bar {
-    background: #007bff;
-    height: 100%;
-    width: 0%;
-    border-radius: 4px;
-}
-
-.time-stamps {
-    display: flex;
-    justify-content: space-between; /* Pushes 0:00 to the left and total to the right */
-    margin-top: 5px;
-    font-size: 0.75rem;
-    color: #333; /* Or white depending on your background */
-}
-
-/* --- 5. DESKTOP NAVIGATION (Screens wider than 768px) --- */
+/* --- 8. DESKTOP MEDIA QUERY (768px+) --- */
 @media screen and (min-width: 768px) {
-    /* Hide the Hamburger Icon on Desktop */
-    .label[for="menuToggle"] {
-        display: none;
+    /* Expand outer navbar container */
+    nav.navbar {
+        max-width: 650px !important;
+        padding: 0 20px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
     }
 
-    /* Reset the Menu from a slide-out drawer to a horizontal bar */
-    .menu {
-        position: static;      /* Removes it from the "slide-out" layer */
-        display: flex;         /* Arrays items side-by-side */
-        flex-direction: row;
-        width: auto;
-        height: auto;
-        opacity: 1;            /* Always visible */
-        transform: none;       /* Disable the slide animation */
-        background: transparent; 
-        background-color: #4a7c66; /* Match Navbar */
-        border-radius: 5px;
-        box-shadow: none;
-        padding: 0;
-        margin-left: auto;     /* Pushes the links to the right side of the navbar */
+    /* Hide mobile hamburger toggle */
+    .label[for="menuToggle"],
+    #menuToggle,
+    .menuOpen {
+        display: none !important;
     }
 
-    /* Style the individual desktop links */
-    .menu li {
-        position: relative;    /* Needed for the submenu dropdown */
+    /* Target EVERY menu element, list, and wrapper inside navbar on desktop */
+    nav.navbar .menu,
+    nav.navbar ul,
+    nav.navbar li,
+    nav.navbar div:not(.nav-logo-link) {
+        background: none !important;
+        background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
     }
 
-    .menu a, .menu .label {
-        color: white;          /* Make text white to pop against the dark navbar */
-        padding: 0 20px;
-        line-height: 60px;     /* Vertically centers text in the 60px navbar */
+    /* Layout the menu items horizontally */
+    nav.navbar .menu {
+        position: static !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 8px !important;
+        width: auto !important;
+        height: auto !important;
+        opacity: 1 !important;
+        transform: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
-    /* Submenu Dropdown Logic for Desktop */
-    .subMenu {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 200px;
-        background: rgba(174, 253, 227, 0.98);
-                background-color: #4a7c66;
-        border-radius: 0 0 10px 10px;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    nav.navbar .menu li {
+        position: relative;
+        list-style: none;
     }
 
-    .subMenu li a {
-  color: #ffffff;
-        /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
-        line-height: 40px;
-        padding-left: 20px;
+    /* Clean link typography */
+    nav.navbar .menu a, 
+    nav.navbar .menu .label {
+        color: #ffffff !important;
+        padding: 8px 16px !important;
+        line-height: 1 !important;
+        font-size: 0.95rem !important;
+        font-weight: 500 !important;
+        border-radius: 20px !important;
+        transition: all 0.2s ease !important;
+        text-decoration: none !important;
     }
 
-    .menu a:hover, .subMenu li a:hover {
-        background-color: rgba(255, 255, 255, 0.15);
-        color: #aefde3; /* Using that mint color as the highlight text */
+    /* Hover effect on individual links */
+    nav.navbar .menu a:hover {
+        color: #8be3c9 !important;
+        background-color: rgba(255, 255, 255, 0.12) !important;
     }
 
-    .about-grid {
-        grid-template-columns: 1fr; /* Stack on top of each other */
-        text-align: center;
-        gap: 20px;
+    /* Dropdown Submenu Fix */
+    nav.navbar .subMenu {
+        position: absolute !important;
+        top: 40px !important;
+        left: 0 !important;
+        width: 180px !important;
+        background: rgba(10, 26, 22, 0.95) !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        border: 1px solid rgba(139, 227, 201, 0.2) !important;
+        border-radius: 12px !important;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+        padding: 6px 0 !important;
     }
-    
-    .about-photo {
-        padding: 10px; /* Smaller padding on mobile */
+
+    nav.navbar .subMenu li a {
+        padding: 8px 16px !important;
+        font-size: 0.85rem !important;
     }
-    
-    .about-photo img {
-        max-width: 320px; /* Keep it focused on smaller screens */
-        margin: 0 auto; /* Force horizontal centering after stacking */
+
+    nav.navbar .subMenu li a:hover {
+        background-color: rgba(139, 227, 201, 0.15) !important;
     }
 }
