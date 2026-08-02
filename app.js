@@ -195,3 +195,30 @@ function setNavTitle(title) {
         navTitle.textContent = title;
     }
 }
+
+// Universal Page Switcher with Smooth Fade Out / Fade In
+function loadPage(title, renderContent) {
+    const main = document.getElementById('main');
+
+    // 1. Immediate actions: Update header title & stop audio
+    if (typeof setNavTitle === 'function') setNavTitle(title);
+    if (typeof stopAllAudio === 'function') stopAllAudio();
+    if (typeof closeMenu === 'function') closeMenu();
+
+    // 2. Trigger Fade Out
+    main.classList.remove('show');
+
+    // 3. Wait for fade-out animation to complete (250ms matches CSS)
+    setTimeout(() => {
+        // Inject new content
+        renderContent(main);
+
+        // Reset scroll position to top of page
+        window.scrollTo(0, 0);
+
+        // Trigger Fade In
+        setTimeout(() => {
+            main.classList.add('show');
+        }, 30);
+    }, 250);
+}

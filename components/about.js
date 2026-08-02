@@ -1,14 +1,6 @@
 // in components/about.js
 function displayAbout() {
-    closeMenu();
-    stopAllAudio();
-    setNavTitle('About Me');
-    
-    const main = document.getElementById('main');
-    
-    main.classList.remove('show');
-
-    setTimeout(() => {
+    loadPage('About Me', (main) => {
         main.innerHTML = `
             <div class="section glass-card">
                 <h2 class="section-title">About Jack</h2>
@@ -35,10 +27,5 @@ function displayAbout() {
                 </div>
             </div>
         `;
-        
-        main.style.display = 'flex';
-        setTimeout(() => {
-            main.classList.add('show');
-        }, 50);
-    }, 300);
+    });
 }

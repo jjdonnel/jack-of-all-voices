@@ -219,6 +219,20 @@ nav.navbar img.nav-logo-img {
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
+/* Main content container transition setup */
+#main {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+    will-change: opacity, transform;
+}
+
+/* Active state triggered when page loads */
+#main.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Video Title / Section Headings */
 #main h2, 
 .video-sectio-title {
