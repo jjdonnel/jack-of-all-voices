@@ -346,6 +346,31 @@ nav.navbar img.nav-logo-img {
     color: rgba(255, 255, 255, 0.75);
 }
 
+.download-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--card-border);
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    flex-shrink: 0;
+}
+
+.download-btn:hover {
+    background: var(--accent-green);
+    color: #0a0f0d;
+    border-color: var(--accent-green);
+}
+
+.download-btn:active {
+    transform: scale(0.95);
+}
+
 /* --- 5. VIDEO CONTAINER --- */
 .video-container {
     width: 90%;

@@ -2,78 +2,106 @@
 function displayCommercial() {
     loadPage('Commercial', (main) => {
         main.innerHTML = `
-                <h1 class="page-title">Commercial Demos</h1>
-                <div id="outdoor-gear" class="genre-card">
-                    <h3>Main Commercial Reel</h3>
-                    <p class="demo-subtitle">Outdoor Gear Commercial</p>
-                    <div class="audio-player-wrapper">
-                        <audio class="audio-element" src="./audio/HarborCraft.mp3"></audio>
-                        <button class="master-play-btn" aria-label="Play">▶</button>
-                        <div class="player-controls">
-                            <div class="progress-container">
-                                <div class="progress-bar"></div>
-                            </div>
-                            <div class="time-stamps">
-                                <span class="time-current">0:00</span>
-                                <span class="time-total">0:00</span>
-                            </div>
+            <h1 class="page-title">Commercial Demos</h1>
+            <div id="outdoor-gear" class="genre-card">
+                <h3>Main Commercial Reel</h3>
+                <p class="demo-subtitle">Outdoor &amp; Lifestyle Gear</p>
+                <div class="audio-player-wrapper">
+                    <audio class="audio-element" src="./audio/HarborCraft.mp3"></audio>
+                    <button class="master-play-btn" aria-label="Play">▶</button>
+                    <div class="player-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-stamps">
+                            <span class="time-current">0:00</span>
+                            <span class="time-total">0:00</span>
                         </div>
                     </div>
+                    <a href="./audio/HarborCraft.wav" download="JackDonnelly_Commercial_HarborCraft.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
+            </div>
 
-                <div id="technical" class="genre-card">
-                    <h3>High Tech & Hard Sell</h3>
-                    <p class="demo-subtitle">Fast-paced, high-impact retail delivery</p>
-                    <div class="audio-player-wrapper">
-                        <audio class="audio-element" src="./audio/nexusCore9.mp3"></audio>
-                        <button class="master-play-btn" aria-label="Play">▶</button>
-                        <div class="player-controls">
-                            <div class="progress-container">
-                                <div class="progress-bar"></div>
-                            </div>
-                            <div class="time-stamps">
-                                <span class="time-current">0:00</span>
-                                <span class="time-total">0:00</span>
-                            </div>
+            <div id="technical" class="genre-card">
+                <h3>High Tech &amp; Tech Promo</h3>
+                <p class="demo-subtitle">Sleek, Modern &amp; Authoritative</p>
+                <div class="audio-player-wrapper">
+                    <audio class="audio-element" src="./audio/nexusCore9.mp3"></audio>
+                    <button class="master-play-btn" aria-label="Play">▶</button>
+                    <div class="player-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-stamps">
+                            <span class="time-current">0:00</span>
+                            <span class="time-total">0:00</span>
                         </div>
                     </div>
+                    <a href="./audio/nexusCore9.wav" download="JackDonnelly_Commercial_NexusCore9.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
+            </div>
 
-                <div id="adventure" class="genre-card">
-                    <h3>Adventure & Hard Sell</h3>
-                    <p class="demo-subtitle">Fast-paced, high-impact retail delivery</p>
-                    <div class="audio-player-wrapper">
-                        <audio class="audio-element" src="./audio/ApexX1.mp3"></audio>
-                        <button class="master-play-btn" aria-label="Play">▶</button>
-                        <div class="player-controls">
-                            <div class="progress-container">
-                                <div class="progress-bar"></div>
-                            </div>
-                            <div class="time-stamps">
-                                <span class="time-current">0:00</span>
-                                <span class="time-total">0:00</span>
-                            </div>
+            <div id="adventure" class="genre-card">
+                <h3>Adventure &amp; Hard Sell</h3>
+                <p class="demo-subtitle">High-Energy &amp; Action Retail</p>
+                <div class="audio-player-wrapper">
+                    <audio class="audio-element" src="./audio/ApexX1.mp3"></audio>
+                    <button class="master-play-btn" aria-label="Play">▶</button>
+                    <div class="player-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-stamps">
+                            <span class="time-current">0:00</span>
+                            <span class="time-total">0:00</span>
                         </div>
                     </div>
+                    <a href="./audio/ApexX1.wav" download="JackDonnelly_Commercial_ApexX1.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
+            </div>
 
-                <div id="travel" class="genre-card">
-                    <h3>Travel - Luggage</h3>
-                    <p class="demo-subtitle">Fast-paced, high-impact retail delivery</p>
-                    <div class="audio-player-wrapper">
-                        <audio class="audio-element" src="./audio/vantage.mp3"></audio>
-                        <button class="master-play-btn" aria-label="Play">▶</button>
-                        <div class="player-controls">
-                            <div class="progress-container">
-                                <div class="progress-bar"></div>
-                            </div>
-                            <div class="time-stamps">
-                                <span class="time-current">0:00</span>
-                                <span class="time-total">0:00</span>
-                            </div>
+            <div id="travel" class="genre-card">
+                <h3>Travel &amp; Hospitality</h3>
+                <p class="demo-subtitle">Smooth, Inviting &amp; Sophisticated</p>
+                <div class="audio-player-wrapper">
+                    <audio class="audio-element" src="./audio/vantage.mp3"></audio>
+                    <button class="master-play-btn" aria-label="Play">▶</button>
+                    <div class="player-controls">
+                        <div class="progress-container">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <div class="time-stamps">
+                            <span class="time-current">0:00</span>
+                            <span class="time-total">0:00</span>
                         </div>
                     </div>
+                    <a href="./audio/vantage.wav" download="JackDonnelly_Commercial_Vantage.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </a>
                 </div>
+            </div>
             `;
 
         // Re-bind click event listeners to custom play buttons
