@@ -32,7 +32,7 @@ function displayProjects() {
                     <span class="tech-badge">CSS3</span>
                 </div>
                 <div class="project-actions">
-                    <a href="#" class="btn-primary">Launch App ↗</a>
+                    <a href="https://rhodycalcs.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-primary">Launch App ↗</a>
                 </div>
             </div>
 
@@ -48,7 +48,7 @@ function displayProjects() {
                     <span class="tech-badge">UI/UX</span>
                 </div>
                 <div class="project-actions">
-                    <a href="#" class="btn-primary">Launch App ↗</a>
+                    <a href="https://voteleprompter.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-primary">Launch App ↗</a>
                 </div>
             </div>
         `;
