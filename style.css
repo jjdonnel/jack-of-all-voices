@@ -674,11 +674,52 @@ nav.navbar img.nav-logo-img {
     text-decoration: underline;
 }
 
+.project-description {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.tech-badge {
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #94a3b8;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.project-actions .btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, #0284c7, #6366f1);
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-actions .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
+}
+
 /* --- 8. DESKTOP MEDIA QUERY (768px+) --- */
 @media screen and (min-width: 768px) {
     /* Expand outer navbar container */
     nav.navbar {
-        max-width: 650px !important;
+        max-width: 800px !important;
         padding: 0 20px !important;
         display: flex !important;
         justify-content: space-between !important;

@@ -10,10 +10,10 @@ function displayHome() {
 
             <!-- Featured Read Card -->
 <div class="genre-card glass-card">
-    <h3>Featured Read: The Ironworks</h3>
-    <p class="demo-subtitle">Dramatic Narration</p>
+    <h3>Multi-Genre Montage</h3>
+    <p class="demo-subtitle">Dynamic Range & Versatility</p>
     <div class="audio-player-wrapper">
-        <audio class="audio-element" src="audio/Ironworks.mp3"></audio>
+        <audio class="audio-element" src="audio/legend.mp3"></audio>
         <button class="master-play-btn" aria-label="Play">▶</button>
         <div class="player-controls">
             <div class="progress-container">
@@ -25,7 +25,7 @@ function displayHome() {
             </div>
         </div>
         <!-- WAV Download Button -->
-        <a href="audio/Ironworks.wav" download="JackDonnelly_Featured_TheIronworks.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
+        <a href="audio/legend.wav" download="JackDonnelly_Featured_Legend.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
@@ -35,12 +35,12 @@ function displayHome() {
     </div>
 </div>
 
-            <!-- Romance Sample Card -->
+            <!-- Empathy Sample Card -->
             <div class="genre-card glass-card">
-                <h3>Romance Sample</h3>
-                <p class="demo-subtitle">The "Luxury" read</p>
+                <h3>Medical & Healthcare</h3>
+                <p class="demo-subtitle">Compassionate & Empathetic</p>
                 <div class="audio-player-wrapper">
-                    <audio class="audio-element" src="./audio/CoastFog.mp3"></audio>
+                    <audio class="audio-element" src="./audio/patient.mp3"></audio>
                     <button class="master-play-btn" aria-label="Play">▶</button>
                     <div class="player-controls">
                         <div class="progress-container">
@@ -51,7 +51,7 @@ function displayHome() {
                             <span class="time-total">0:00</span>
                         </div>
                     </div>
-                    <a href="audio/coastFog.wav" download="JackDonnelly_Featured_coastFog.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
+                    <a href="audio/patient.wav" download="JackDonnelly_Featured_Patient.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
@@ -63,10 +63,10 @@ function displayHome() {
 
             <!-- Commercial Sample Card -->
             <div class="genre-card glass-card">
-                <h3>Main Commercial Reel</h3>
-                <p class="demo-subtitle">Outdoor Gear Commercial</p>
+                <h3>Aerospace & defense Tech</h3>
+                <p class="demo-subtitle">Grounded & Technical</p>
                 <div class="audio-player-wrapper">
-                    <audio class="audio-element" src="./audio/HarborCraft.mp3"></audio>
+                    <audio class="audio-element" src="./audio/visionary.mp3"></audio>
                     <button class="master-play-btn" aria-label="Play">▶</button>
                     <div class="player-controls">
                         <div class="progress-container">
@@ -77,7 +77,7 @@ function displayHome() {
                             <span class="time-total">0:00</span>
                         </div>
                     </div>
-                    <a href="audio/HarborCraft.wav" download="JackDonnelly_Featured_HarborCraft.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
+                    <a href="audio/visionary.wav" download="JackDonnelly_Featured_Visionary.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>
@@ -89,10 +89,10 @@ function displayHome() {
 
             <!-- Instructional Sample Card -->
             <div class="genre-card glass-card">
-                <h3>Corporate Training</h3>
-                <p class="demo-subtitle">Professional & Informative Delivery</p>
+                <h3>Rough Velvet Narrative</h3>
+                <p class="demo-subtitle">Intimate & Luxury Ads</p>
                 <div class="audio-player-wrapper">
-                    <audio class="audio-element" src="./audio/4-6_Golf.mp3"></audio>
+                    <audio class="audio-element" src="./audio/providenceFog.mp3"></audio>
                     <button class="master-play-btn" aria-label="Play">▶</button>
                     <div class="player-controls">
                         <div class="progress-container">
@@ -103,7 +103,7 @@ function displayHome() {
                             <span class="time-total">0:00</span>
                         </div>
                     </div>
-                    <a href="audio/Golf.wav" download="JackDonnelly_Featured_Golf.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
+                    <a href="audio/providenceFog.wav" download="JackDonnelly_Featured_ProvidenceFog.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                 <polyline points="7 10 12 15 17 10"></polyline>

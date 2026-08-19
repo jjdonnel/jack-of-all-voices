@@ -5,7 +5,7 @@ function displayCommercial() {
             <h1 class="page-title">Commercial Demos</h1>
             <div id="outdoor-gear" class="genre-card">
                 <h3>Main Commercial Reel</h3>
-                <p class="demo-subtitle">Outdoor &amp; Lifestyle Gear</p>
+                <p class="demo-subtitle">Outdoor & Lifestyle Gear</p>
                 <div class="audio-player-wrapper">
                     <audio class="audio-element" src="./audio/HarborCraft.mp3"></audio>
                     <button class="master-play-btn" aria-label="Play">▶</button>
@@ -54,10 +54,10 @@ function displayCommercial() {
             </div>
 
             <div id="adventure" class="genre-card">
-                <h3>Adventure &amp; Hard Sell</h3>
-                <p class="demo-subtitle">High-Energy &amp; Action Retail</p>
+                <h3>Luxury & Heritage</h3>
+                <p class="demo-subtitle">Smooth, Refined & Timeless</p>
                 <div class="audio-player-wrapper">
-                    <audio class="audio-element" src="./audio/ApexX1.mp3"></audio>
+                    <audio class="audio-element" src="./audio/highEndSpirit.mp3"></audio>
                     <button class="master-play-btn" aria-label="Play">▶</button>
                     <div class="player-controls">
                         <div class="progress-container">
@@ -68,7 +68,7 @@ function displayCommercial() {
                             <span class="time-total">0:00</span>
                         </div>
                     </div>
-                    <a href="./audio/ApexX1.wav" download="JackDonnelly_Commercial_ApexX1.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
+                    <a href="./audio/highEndSpirit.wav" download="JackDonnelly_Commercial_highEndSpirit.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                             <polyline points="7 10 12 15 17 10"></polyline>
