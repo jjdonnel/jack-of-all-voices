@@ -18,13 +18,24 @@ function displayCommercial() {
                             <span class="time-total">0:00</span>
                         </div>
                     </div>
-                    <a href="./audio/HarborCraft.wav" download="JackDonnelly_Commercial_HarborCraft.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                    </a>
+                    <div class="download-actions-vertical">
+                        <a href="./audio/HarborCraft.mp3" download="JackDonnelly_Commercial_HarborCraft.mp3" class="download-btn mp3-btn" title="Download MP3" aria-label="Download MP3">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span class="file-type">MP3</span>
+                        </a>
+                        <a href="./audio/HarborCraft.wav" download="JackDonnelly_Commercial_HarborCraft.wav" class="download-btn wav-btn" title="Download WAV" aria-label="Download WAV">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span class="file-type">WAV</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -43,13 +54,24 @@ function displayCommercial() {
                             <span class="time-total">0:00</span>
                         </div>
                     </div>
-                    <a href="./audio/nexusCore9.wav" download="JackDonnelly_Commercial_NexusCore9.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                    </a>
+                    <div class="download-actions-vertical">
+                        <a href="./audio/nexusCore9.mp3" download="JackDonnelly_Commercial_NexusCore9.mp3" class="download-btn mp3-btn" title="Download MP3" aria-label="Download MP3">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span class="file-type">MP3</span>
+                        </a>
+                        <a href="./audio/nexusCore9.wav" download="JackDonnelly_Commercial_NexusCore9.wav" class="download-btn wav-btn" title="Download WAV" aria-label="Download WAV">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span class="file-type">WAV</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -68,13 +90,24 @@ function displayCommercial() {
                             <span class="time-total">0:00</span>
                         </div>
                     </div>
-                    <a href="./audio/highEndSpirit.wav" download="JackDonnelly_Commercial_highEndSpirit.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                    </a>
+                    <div class="download-actions-vertical">
+                        <a href="./audio/highEndSpirit.mp3" download="JackDonnelly_Commercial_HighEndSpirit.mp3" class="download-btn mp3-btn" title="Download MP3" aria-label="Download MP3">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span class="file-type">MP3</span>
+                        </a>
+                        <a href="./audio/highEndSpirit.wav" download="JackDonnelly_Commercial_HighEndSpirit.wav" class="download-btn wav-btn" title="Download WAV" aria-label="Download WAV">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span class="file-type">WAV</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -93,13 +126,24 @@ function displayCommercial() {
                             <span class="time-total">0:00</span>
                         </div>
                     </div>
-                    <a href="./audio/vantage.wav" download="JackDonnelly_Commercial_Vantage.wav" class="download-btn" title="Download WAV File" aria-label="Download WAV File">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                            <polyline points="7 10 12 15 17 10"></polyline>
-                            <line x1="12" y1="15" x2="12" y2="3"></line>
-                        </svg>
-                    </a>
+                    <div class="download-actions-vertical">
+                        <a href="./audio/vantage.mp3" download="JackDonnelly_Commercial_Vantage.mp3" class="download-btn mp3-btn" title="Download MP3" aria-label="Download MP3">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span class="file-type">MP3</span>
+                        </a>
+                        <a href="./audio/vantage.wav" download="JackDonnelly_Commercial_Vantage.wav" class="download-btn wav-btn" title="Download WAV" aria-label="Download WAV">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            <span class="file-type">WAV</span>
+                        </a>
+                    </div>
                 </div>
             </div>
             `;

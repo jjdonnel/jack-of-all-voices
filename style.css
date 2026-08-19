@@ -371,6 +371,39 @@ nav.navbar img.nav-logo-img {
     transform: scale(0.95);
 }
 
+.download-actions-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-actions-vertical .download-btn {
+    display: flex;
+    flex-direction: column; /* Stacks SVG icon over text */
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 6px 8px;
+    width: 48px; /* Fixed compact width prevents horizontal overflow */
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.download-actions-vertical .file-type {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.download-actions-vertical .download-btn:hover {
+    transform: translateY(-1px);
+}
+
 /* --- 5. VIDEO CONTAINER --- */
 .video-container {
     width: 90%;
@@ -713,6 +746,23 @@ nav.navbar img.nav-logo-img {
 .project-actions .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
+}
+
+.download-actions {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
 }
 
 /* --- 8. DESKTOP MEDIA QUERY (768px+) --- */
