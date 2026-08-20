@@ -261,6 +261,11 @@ nav.navbar img.nav-logo-img {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.genre-card:hover .app-logo {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), 0 0 16px rgba(56, 189, 248, 0.3);
+}
+
 .genre-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
@@ -707,7 +712,7 @@ nav.navbar img.nav-logo-img {
     text-decoration: underline;
 }
 
-.project-description {
+.apps-description {
     color: #cbd5e1;
     font-size: 0.95rem;
     line-height: 1.6;
@@ -731,7 +736,7 @@ nav.navbar img.nav-logo-img {
     font-weight: 500;
 }
 
-.project-actions .btn-primary {
+.apps-actions .btn-primary {
     display: inline-block;
     background: linear-gradient(135deg, #0284c7, #6366f1);
     color: #ffffff;
@@ -743,9 +748,47 @@ nav.navbar img.nav-logo-img {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.project-actions .btn-primary:hover {
+.apps-actions .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
+}
+
+.card-header {
+    display: flex;
+    flex-direction: column; /* Stack logo above title, or keep row and use center */
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.card-title-group h3 {
+    margin: 0;
+    font-size: 1.35rem;
+    color: #f8fafc;
+}
+
+.card-title-group  {
+    text-align: center;
+}
+
+.card-title-group .demo-subtitle {
+    margin: 0.2rem 0 0 0;
+    font-size: 0.85rem;
+}
+
+.app-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4), 0 0 12px rgba(56, 189, 248, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .download-actions {
