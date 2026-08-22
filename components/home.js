@@ -5,7 +5,7 @@ function displayHome() {
             <!-- Hero Tagline -->
             <div class="tagline-container">
                 <h1 class="hero-tagline">Jack Donnelly</h1>
-                <p class="hero-subtagline">From First Read to Final Edit... Voiceover That Hits The Mark.</p>
+                <p class="hero-subtagline">From first read to final master - voiceover that hits the mark.</p>
             </div>
 
             <!-- Featured Read Card -->

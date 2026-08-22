@@ -15,7 +15,7 @@ function displayAbout() {
             
             <p>Based in my loft studio in Providence, I bridge the gap between technical precision and creative performance. For twenty-seven years, I forecasted the storms in the sky, learning that in the face of the unpredictable, <strong>clarity is everything.</strong></p>
             
-            <p>I’ve navigated the "storm of a lifetime"—weathering forty-seven rounds of radiation and two years of intensive androgen deprivation therapy with the same grit I bring to the booth. That journey sharpened my perspective and reclaimed a level of focus that I now pour into every script and every line of code.</p>
+            <p>I’ve navigated the "storm of a lifetime" — facing metastatic cancer with the same grit I bring to the booth. That journey sharpened my perspective and reclaimed a level of focus that I now pour into every script and every line of code.</p>
             
             <div class="skills-box">
                 <h4>What I Do:</h4>
