@@ -1,5 +1,5 @@
 /* --- 1. GLOBAL RESET & LOGO-MATCHED BACKGROUND --- */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -356,8 +356,8 @@ nav.navbar img.nav-logo-img {
     height: 40px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid var(--card-border);
-    color: var(--text-main);
+    border: 1px solid var(--card-border, rgba(139, 227, 201, 0.2));
+    color: var(--text-main, #ffffff);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -367,9 +367,9 @@ nav.navbar img.nav-logo-img {
 }
 
 .download-btn:hover {
-    background: var(--accent-green);
+    background: var(--accent-green, #8be3c9);
     color: #0a0f0d;
-    border-color: var(--accent-green);
+    border-color: var(--accent-green, #8be3c9);
 }
 
 .download-btn:active {
@@ -386,12 +386,12 @@ nav.navbar img.nav-logo-img {
 
 .download-actions-vertical .download-btn {
     display: flex;
-    flex-direction: column; /* Stacks SVG icon over text */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2px;
     padding: 6px 8px;
-    width: 48px; /* Fixed compact width prevents horizontal overflow */
+    width: 48px;
     border-radius: 8px;
     text-decoration: none;
     transition: background-color 0.2s ease, transform 0.1s ease;
@@ -582,10 +582,10 @@ nav.navbar img.nav-logo-img {
     line-height: 1.3;
 }
 
-/* --- ABOUT PAGE GLASS CARD OVERRIDES --- */
+/* --- GLASS CARD SHARED BASE --- */
 .section.glass-card {
     width: 90%;
-    max-width: 420px;
+    max-width: 440px;
     margin: 0 auto;
     padding: 24px 20px;
     background: rgba(255, 255, 255, 0.08);
@@ -616,63 +616,151 @@ nav.navbar img.nav-logo-img {
     color: #ffffff;
 }
 
-/* --- CONTACT FORM STYLES --- */
+/* --- CONTACT INTAKE FORM STYLING --- */
 .contact-card {
     width: 90%;
-    max-width: 440px;
+    max-width: 480px;
     margin: 0 auto;
-    padding: 28px 20px;
+    padding: 28px 24px;
     box-sizing: border-box;
 }
 
 .contact-subtitle {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 0.92rem;
+    margin-bottom: 22px;
+    line-height: 1.5;
+    text-align: center;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 16px;
     width: 100%;
 }
 
 .form-group {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-/* Full-width inputs with glass styling */
-.contact-form input,
+.form-group label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #8be3c9;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+}
+
+/* Full-width inputs, textareas & select dropdowns */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
 .contact-form textarea {
     width: 100%;
     box-sizing: border-box;
-    padding: 12px 16px;
-    background: rgba(10, 26, 22, 0.6);
+    padding: 12px 14px;
+    background: rgba(10, 26, 22, 0.75);
     border: 1px solid rgba(139, 227, 201, 0.3);
     border-radius: 10px;
     color: #ffffff;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     font-family: inherit;
     outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
+/* Placeholder contrast */
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.45);
 }
 
+/* Custom styled dropdown arrow */
+.contact-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238be3c9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 1.1rem;
+    padding-right: 36px;
+    cursor: pointer;
+}
+
+.contact-form select option {
+    background-color: #0a1a16;
+    color: #ffffff;
+    padding: 10px;
+}
+
+/* Focus States */
 .contact-form input:focus,
+.contact-form select:focus,
 .contact-form textarea:focus {
     border-color: #8be3c9;
-    box-shadow: 0 0 8px rgba(139, 227, 201, 0.3);
+    box-shadow: 0 0 10px rgba(139, 227, 201, 0.35);
+    background: rgba(10, 26, 22, 0.9);
 }
 
 .contact-form textarea {
     resize: vertical;
     min-height: 110px;
+}
+
+/* Add-On Checkbox Group */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    background: rgba(10, 26, 22, 0.5);
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(139, 227, 201, 0.2);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.86rem;
+    cursor: pointer;
+    line-height: 1.3;
+}
+
+.checkbox-label input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid rgba(139, 227, 201, 0.4);
+    border-radius: 4px;
+    background: rgba(10, 26, 22, 0.8);
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.checkbox-label input[type="checkbox"]:checked {
+    background-color: #8be3c9;
+    border-color: #8be3c9;
+}
+
+.checkbox-label input[type="checkbox"]:checked::after {
+    content: "✓";
+    position: absolute;
+    color: #0b1a15;
+    font-size: 12px;
+    font-weight: 800;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Styled Submit Button */
@@ -686,20 +774,22 @@ nav.navbar img.nav-logo-img {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    margin-top: 6px;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 8px;
 }
 
 .btn-submit:hover {
     background: #a3ebd7;
     transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(139, 227, 201, 0.3);
 }
 
 /* Direct Contact Link */
 .direct-contact {
     margin-top: 22px;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     color: rgba(255, 255, 255, 0.8);
+    text-align: center;
 }
 
 .direct-contact a {
@@ -712,6 +802,7 @@ nav.navbar img.nav-logo-img {
     text-decoration: underline;
 }
 
+/* --- APPS COMPONENT STYLING --- */
 .apps-description {
     color: #cbd5e1;
     font-size: 0.95rem;
@@ -755,7 +846,7 @@ nav.navbar img.nav-logo-img {
 
 .card-header {
     display: flex;
-    flex-direction: column; /* Stack logo above title, or keep row and use center */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
@@ -769,7 +860,7 @@ nav.navbar img.nav-logo-img {
     color: #f8fafc;
 }
 
-.card-title-group  {
+.card-title-group {
     text-align: center;
 }
 
