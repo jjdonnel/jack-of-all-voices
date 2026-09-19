@@ -13,7 +13,7 @@ function displayHome() {
                 <h3>Multi-Genre Montage</h3>
                 <p class="demo-subtitle">Dynamic Range & Versatility</p>
                 <div class="audio-player-wrapper">
-                    <audio class="audio-element" src="audio/legend.mp3"></audio>
+                    <audio class="audio-element" src="audio/JACK DONNELLY_DEMO.mp3"></audio>
                     <button class="master-play-btn" aria-label="Play">▶</button>
                     <div class="player-controls">
                         <div class="progress-container">
@@ -25,7 +25,7 @@ function displayHome() {
                         </div>
                     </div>
                     <div class="download-actions-vertical">
-                        <a href="./audio/legend.mp3" download="JackDonnelly_Commercial_patient.mp3" class="download-btn mp3-btn" title="Download MP3" aria-label="Download MP3">
+                        <a href="./audio/JACK DONNELLY_DEMO.mp3" download="JackDonnelly_Commercial_patient.mp3" class="download-btn mp3-btn" title="Download MP3" aria-label="Download MP3">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                                 <polyline points="7 10 12 15 17 10"></polyline>
@@ -33,7 +33,7 @@ function displayHome() {
                             </svg>
                             <span class="file-type">MP3</span>
                         </a>
-                        <a href="./audio/legend.wav" download="JackDonnelly_Commercial_patient.wav" class="download-btn wav-btn" title="Download WAV" aria-label="Download WAV">
+                        <a href="./audio/JACK DONNELLY_DEMO.wav" download="JackDonnelly_Commercial_patient.wav" class="download-btn wav-btn" title="Download WAV" aria-label="Download WAV">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                                 <polyline points="7 10 12 15 17 10"></polyline>
