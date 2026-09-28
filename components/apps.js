@@ -66,6 +66,28 @@ function displayApps() {
                     <a href="https://voteleprompter.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-primary">Launch App ↗</a>
                 </div>
             </div>
+
+            <div id="acx-audio-analyzer" class="genre-card glass-card">
+                <div class="card-header">
+                    <img src="images/audioCheck.png" alt="ACX Audio Analyzer Logo" class="app-logo">
+                    <div class="card-title-group">
+                        <h3>ACX Audio Analyzer &amp; Master</h3>
+                        <p class="demo-subtitle">Automated ACX/Audible Compliance &amp; Mastering</p>
+                    </div>
+                </div>
+                <p class="apps-description">
+                    An in-browser studio utility to inspect raw voiceover audio and auto-conform levels to strict ACX peak, RMS, and noise floor standards.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Vanilla JS</span>
+                    <span class="tech-badge">Web Audio API</span>
+                    <span class="tech-badge">lamejs</span>
+                    <span class="tech-badge">PWA</span>
+                </div>
+                <div class="apps-actions">
+                    <a href="https://audiocheck.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-primary">Launch App ↗</a>
+                </div>
+            </div>
         `;
     });
 }
