@@ -899,7 +899,16 @@ nav.navbar img.nav-logo-img {
     border-radius: 6px;
 }
 
-/* Audiobook Layout Enhancements */
+/* --- AUDIOBOOK LAYOUT ENHANCEMENTS --- */
+
+/* 1. Allow Audiobook Cards to Expand on Desktop */
+.audiobook-card {
+    position: relative;
+    margin-bottom: 2rem;
+    max-width: 600px !important; /* Expands width so elements can sit side-by-side */
+    width: 95% !important;
+}
+
 .section-subtitle-heading {
     font-size: 1.25rem;
     font-weight: 600;
@@ -907,11 +916,7 @@ nav.navbar img.nav-logo-img {
     color: var(--primary-accent, #10b981);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 0.5rem;
-}
-
-.audiobook-card {
-    position: relative;
-    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .platform-badge {
@@ -938,14 +943,6 @@ nav.navbar img.nav-logo-img {
     border: 1px solid rgba(16, 185, 129, 0.4);
 }
 
-.audiobook-content-layout {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
 .audiobook-header h3 {
     font-size: 1.35rem;
     font-weight: 700;
@@ -953,50 +950,66 @@ nav.navbar img.nav-logo-img {
     line-height: 1.2;
 }
 
-.cover-art-container {
-    flex-shrink: 0;
-    width: 120px;
+/* 2. Side-by-Side Flex Layout */
+.audiobook-content-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-top: 1rem;
+    width: 100%;
 }
 
-.cover-art-img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 8px;
+.cover-art-container {
+    flex-shrink: 0;
+    width: 130px;
+    height: 130px;
+    border-radius: 10px;
+    overflow: hidden;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+.cover-art-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 3. Player & CTA Grouping */
 .audiobook-player-area {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
 }
 
 .audiobook-cta-row {
     display: flex;
+    flex-direction: row;
     gap: 0.75rem;
-    margin-top: 0.5rem;
+    width: 100%;
 }
 
-.cta-link-btn {
+.audiobook-cta-row .cta-link-btn {
+    flex: 1;
+    text-align: center;
     font-size: 0.85rem;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
+    padding: 0.6rem 0.75rem;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cta-link-btn.primary-cta {
     background: var(--primary-accent, #10b981);
     color: #000;
-}
-
-.cta-link-btn.primary-cta:hover {
-    filter: brightness(1.1);
 }
 
 .cta-link-btn.secondary-cta {
@@ -1005,12 +1018,12 @@ nav.navbar img.nav-logo-img {
     background: rgba(255, 255, 255, 0.05);
 }
 
-.cta-link-btn.secondary-cta:hover {
-    background: rgba(255, 255, 255, 0.15);
-}
-
-/* Mobile Responsive Adjustments */
+/* --- MOBILE FALLBACK (Under 640px) --- */
 @media (max-width: 640px) {
+    .audiobook-card {
+        max-width: 380px !important;
+    }
+
     .audiobook-content-layout {
         flex-direction: column;
         align-items: center;
@@ -1018,6 +1031,7 @@ nav.navbar img.nav-logo-img {
 
     .cover-art-container {
         width: 150px;
+        height: 150px;
     }
 
     .audiobook-player-area {
